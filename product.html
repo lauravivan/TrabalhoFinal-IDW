@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <title>Gatos</title>
+    </head>
+    <body>
+        <header class="bg-light">
+            <div class="text-center p-5">
+                <a href="index.html">
+                    <img 
+                    class="img-fluid page-logo" 
+                    src="assets/img/store-logo.png">
+                </a> 
+            </div> 
+        </header>
+
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="nav-link text-decoration-none text-reset" href="index.html">Página Inicial</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsed-navbar" aria-expanded="false" aria-controls="#collapsed-navbar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsed-navbar">
+                    <a class="nav-link text-decoration-none text-reset" href="#">Sobre nós</a>
+                    <ul class="navbar-nav ms-auto me-md-4 me-lg-4 d-flex align-items-md-center align-items-lg-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-decoration-none text-reset" href="#" role="button" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">Minha conta</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">Login</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Cadastrar</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Meus pedidos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-decoration-none text-reset" href="#">
+                                <i class="bi bi-cart-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <span>
+                                <i class="bi bi-search"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+   
+        <section>
+            <div class="container d-flex">
+                <div class="detail-image-container m-4" id="detail-image-container"></div>
+
+                <div class="m-4">
+                    <h2 class="text-uppercase fs-1" id="product-title"></h2>
+                    <p id="product-description"></p>
+                    <p id="product-price"></p>
+
+                    <form class="d-flex flex-row">
+                        <label>Calcular frete: </label>
+                        &nbsp;&nbsp;
+                        <input>
+                    </form>
+
+                    <button class="btn-buy text-white rounded">
+                        <i class="bi bi-cart-fill text-white"></i>
+                        Eu quero!
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="p-5">
+            <div class="d-flex flex-row justify-content-between p-5">
+                <img class="img-fluid page-logo-white ms-4" src="assets/img/store-logo-white.png">
+                <ul>
+                    <li class="text-white">Precisa de ajuda?</li>
+                    <br>
+                    <li>
+                        <ul class="d-flex flex-row p-0">
+                            <li>
+                                <i class="bi bi-telephone-fill fs-1 text-white"></i>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="text-white">Telefone:</li>
+                                    <li class="text-white">(49) 95555-5555</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="d-flex flex-row p-0">
+                            <li>
+                                <i class="bi bi-envelope-fill fs-1 text-white"></i>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li class="text-white">E-mail:</li>
+                                    <li class="text-white">ourpetstore@mail.com</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <ul class="d-flex flex-column">
+                    <li class="text-white align-self-center pb-2">
+                        REDES SOCIAIS
+                    </li>
+                    <li>
+                        <i class="bi bi-twitter fs-1 text-white"></i>
+                        &nbsp;
+                        <i class="bi bi-instagram fs-1 text-white"></i>
+                        &nbsp;
+                        <i class="bi bi-facebook fs-1 text-white"></i>
+                        &nbsp;
+                        <i class="bi bi-linkedin fs-1 text-white"></i>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="node_modules/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript">
+            discoverSelectedProduct();
+        </script>
+    </body>
+</html>

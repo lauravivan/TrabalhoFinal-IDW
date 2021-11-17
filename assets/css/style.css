@@ -1,0 +1,49 @@
+body, .btn-buy {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background-color: #F8F6F6;
+}
+
+.page-logo {
+    max-width: 10vw;
+}
+
+.page-logo-white {
+    max-width: 20vw;
+    max-height: 25vh;
+}
+
+.product-image {
+    max-width: 20vw;
+}
+
+.product-info {
+    cursor: pointer;
+}
+
+.product-info:hover {
+    opacity: 0.8;
+}
+
+.product-name, #product-title {
+    font-weight: 700;
+}
+
+footer {
+    background-color: #000;
+}
+
+.detail-image-container {
+    background-color: #000;
+    max-width: 30vw;
+}
+
+.detail-image {
+    max-width: 25vw;
+}
+
+.btn-buy {
+    background-color: #000;
+}
