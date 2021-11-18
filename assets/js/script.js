@@ -17,28 +17,34 @@ function goToProductPage(imageSource) {
 }
 
 function discoverSelectedProduct() {
-    if (localStorage.getItem("image source").includes("coxinha")) {
-        showDetailedProduct(catProducts[0]);
-    } else if (localStorage.getItem("image source").includes("cat-feeder")) {
-        showDetailedProduct(catProducts[1]);
-    } else if (localStorage.getItem("image source").includes("tv")) {
-        showDetailedProduct(catProducts[2]);
-    } else if (localStorage.getItem("image source").includes("cow-costume")) {
-        showDetailedProduct(catProducts[3]);
-    } else if (localStorage.getItem("image source").includes("castle")) {
-        showDetailedProduct(catProducts[4]);
-    } else if (localStorage.getItem("image source").includes("sardine")) {
-        showDetailedProduct(catProducts[5]);
-    } else if (localStorage.getItem("image source").includes("sweater")) {
-        showDetailedProduct(catProducts[6]);
-    } else if (localStorage.getItem("image source").includes("unicorn-costume")) {
-        showDetailedProduct(catProducts[7]);
-    } else if (localStorage.getItem("image source").includes("wool-sweater")) {
-        showDetailedProduct(dogProducts[0]);
-    } else if (localStorage.getItem("image source").includes("dog-collar")) {
-        showDetailedProduct(dogProducts[1]);
-    } else if (localStorage.getItem("image source").includes("monkey")) {
-        showDetailedProduct(dogProducts[2]);
+    let imageSource = localStorage.getItem("image source");
+
+    if (imageSource.includes("cat-products")) {
+        if (imageSource.includes("coxinha")) {
+            showDetailedProduct(catProducts[0]);
+        } else if (imageSource.includes("cat-feeder")) {
+            showDetailedProduct(catProducts[1]);
+        } else if (imageSource.includes("tv")) {
+            showDetailedProduct(catProducts[2]);
+        } else if (imageSource.includes("cow-costume")) {
+            showDetailedProduct(catProducts[3]);
+        } else if (imageSource.includes("castle")) {
+            showDetailedProduct(catProducts[4]);
+        } else if (imageSource.includes("sardine")) {
+            showDetailedProduct(catProducts[5]);
+        } else if (imageSource.includes("sweater")) {
+            showDetailedProduct(catProducts[6]);
+        } else if (imageSource.includes("unicorn-costume")) {
+            showDetailedProduct(catProducts[7]);
+        }
+    } else if (imageSource.includes("dog-products")) {
+        if (imageSource.includes("wool-sweater")) {
+            showDetailedProduct(dogProducts[0]);
+        } else if (imageSource.includes("dog-collar")) {
+            showDetailedProduct(dogProducts[1]);
+        } else if (imageSource.includes("monkey")) {
+            showDetailedProduct(dogProducts[2]);
+        }
     }
 }
 
