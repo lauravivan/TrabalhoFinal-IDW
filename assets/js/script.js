@@ -46,10 +46,12 @@ function showDetailedProduct(list) {
     let imageContainer = document.getElementById("detail-image-container");
     let name = document.getElementById("product-title");
     let description = document.getElementById("product-description");
+    let price = document.getElementById("product-price");
 
-    imageContainer.innerHTML += `<img class="detail-image m-3" src="${list.img}">`;
+    imageContainer.innerHTML += `<img class="img-fluid detail-image m-3" src="${list.img}">`;
     name.innerText = `${list.name}`;
     description.innerText = `${list.description}`;
+    price.innerText = `Preço: R$${list.price}`
 }
 
 function showMainOffers() {
@@ -129,49 +131,49 @@ let catProducts = [
     {
         name: "Coxinha de Catnip",
         img: "assets/img/cat-products/coxinha.jpg",
-        description: "Catnip é uma erva natural da família do hortelã que pode tanto aliviar o stress para gatos muito ativos, que vivem arranhando e danificando objetos da casa, como pode servir de estimulante para gatos muito quietinhos. Recheio: - 2g de catnip",
+        description: "Catnip é uma erva natural da família do hortelã que pode tanto aliviar o stress para gatos muito ativos, que vivem arranhando e danificando objetos da casa, como pode servir de estimulante para gatos muito quietinhos. Recheio: 2g de catnip",
         price: "32,90"
     },
     {
         name: "Comedouro alto de madeira | duplo",
         img: "assets/img/cat-products/cat-feeder.jpg",
-        description: "",
+        description: "O comedouro é feito à mão, com madeira cedrinho e finalizado com óleo mineral. Acompanham 2 tigelas inox ou cerâmica, super fáceis de lavar e ainda ajudam na prevenção de acne felina.",
         price: "159,90"
     },
     {
         name: "TV Tubo de Papelão",
         img: "assets/img/cat-products/tv.jpg",
-        description: "",
+        description: "Essa é mais uma forma de enriquecer o ambiente, proporcionando mais atividades e brincadeiras para o seu gato. Além disso, o papelão é um isolante térmico e ajuda a preservar o calor do nosso corpo, proporcionando um sono de beleza tranquilo e quentinho, do jeito que a gente gosta! Vem com furos para você interagir com seu gato, com petiscos ou brinquedos. O papelão é de alta qualidade, com vida útil longa! É simples de montar, não vai cola, apenas dobras.",
         price: "99,90"
     },
     {
         name: "Fantasia estampa de vaca",
         img: "assets/img/cat-products/cow-costume.jpg",
-        description: "",
+        description: "Essa roupa confortável e fácil de vestir. Tamanhos disponíveis: P (até 3kg), M (de 3 a 4kg) ou G (de 4kg a 7kg).",
         price: "76,40"
     },
     {
         name: "Castelo de papelão",
         img: "assets/img/cat-products/castle.jpg",
-        description: "",
+        description: "Essa é mais uma forma de enriquecer o ambiente, proporcionando mais atividades e brincadeiras para o seu gato. Além disso, o papelão é um isolante térmico e ajuda a preservar o calor do nosso corpo, proporcionando um sono de beleza tranquilo e quentinho, do jeito que a gente gosta!",
         price: "99,90"
     },
     {
         name: "Sardinhas de Catnip em lata",
         img: "assets/img/cat-products/sardine.jpg",
-        description: "",
+        description: "A lata vem com 4 sardinhas recheadas com 2g de catnip cada. As sardinhas são de feltro e feitas à mão. A erva você já sabe: tem o selo erva da boa! Cada sardinha tem durabilidade (efeito do catnip) de no mínimo 3 meses. Pode ficar tranquilo, humano: seu gato tem diversão garantida bom um bom tempo.",
         price: "99,90"
     },
     {
         name: "Moletom canguru",
         img: "assets/img/cat-products/sweater.jpg",
-        description: "",
+        description: "Moletom básico azul-marinho para o dia-a-dia. Tamanhos disponíveis: P (até 3kg), M (de 3 a 4kg) ou G (de 4kg a 7kg).",
         price: "76,40"
     },
     {
         name: "Fantasia de unicórnio",
         img: "assets/img/cat-products/unicorn-costume.jpg",
-        description: "",
+        description: "O fecho é de velcro, ajustável à cabeça do seu gato. É super leve, fique tranquilo, o chifre não pesa! Tamanho único",
         price: "59,90"
     }
 ]

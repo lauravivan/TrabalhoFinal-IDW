@@ -30,7 +30,8 @@ nav {
 }
 
 .product-name, 
-#product-title {
+#product-title,
+#product-price {
     font-weight: 700;
 }
 
@@ -40,15 +41,10 @@ footer {
 
 .detail-image-container {
     background-color: #000;
-    max-width: 30vw;
 }
 
 .detail-image {
-    max-width: 25vw;
-}
-
-.btn-buy {
-    background-color: #000;
+    max-width: 24vw;
 }
 
 .btn-see-more {
