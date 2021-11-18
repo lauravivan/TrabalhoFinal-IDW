@@ -59,6 +59,18 @@
             </div>
         </nav>
 
+        <section>
+            <div class="d-flex justify-content-center ms-5 me-5">
+                <div class="align-self-center" id="container-arrow-left"></div>
+                <div class="d-flex align-items-end justify-content-center position-relative m-3" id="container-pictures-homepage"></div>
+                <div class="align-self-center" id="container-arrow-right"></div>
+            </div>
+            <div class="p-3 mt-4 mb-5">
+                <h2 class="fs-4">Principais ofertas</h2>
+                <div class="row g-4" id="main-offers"></div>
+            </div>
+        </section>
+
         <footer class="p-5">
             <div class="d-flex flex-row justify-content-between p-5">
                 <img class="img-fluid page-logo-white ms-4" src="assets/img/store-logo-white.png">
@@ -112,5 +124,9 @@
 
         <script type="text/javascript" src="node_modules/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript">
+            showCatPicture();
+            showMainOffers();
+        </script>
     </body>
 </html>

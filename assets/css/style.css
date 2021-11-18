@@ -1,4 +1,6 @@
-body, .btn-buy {
+body, 
+.btn-buy, 
+.btn-see-more {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -27,7 +29,8 @@ nav {
     opacity: 0.8;
 }
 
-.product-name, #product-title {
+.product-name, 
+#product-title {
     font-weight: 700;
 }
 
@@ -46,4 +49,14 @@ footer {
 
 .btn-buy {
     background-color: #000;
+}
+
+.btn-see-more {
+    background-color: #F8F6F6;
+    font-weight: 500;
+}
+
+.btn-see-more:hover {
+    opacity: 0.9;
+    font-size: 1.3rem;
 }

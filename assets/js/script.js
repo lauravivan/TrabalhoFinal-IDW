@@ -52,6 +52,58 @@ function showDetailedProduct(list) {
     description.innerText = `${list.description}`;
 }
 
+function showMainOffers() {
+    let containerMainOffers = document.getElementById("main-offers");
+    let mainOffers = [catProducts[0], catProducts[3], catProducts[6], catProducts[7], dogProducts[0], dogProducts[1], dogProducts[2]];
+    for(let i = 0; i < mainOffers.length; i++) {
+        containerMainOffers.innerHTML +=
+            `<div class="col-md-4 col-lg-3 col-sm-6 col-12">
+                <div class="bg-light text-center pt-3 pb-2 product-info">
+                    <img class="product-image img-fluid" id="image" onclick="goToProductPage(this.src)" src="${mainOffers[i].img}">
+                    <p class="text-uppercase pt-4 product-name">${mainOffers[i].name}</p>
+                    <p>R$ ${mainOffers[i].price}</p>
+                </div>
+            </div>`;
+    }
+}
+
+function showCatPicture() {
+    let container = document.getElementById("container-pictures-homepage")
+    let containerArrowRight = document.getElementById("container-arrow-right");
+    let containerArrowLeft = document.getElementById("container-arrow-left");
+
+    containerArrowLeft.innerText = "";
+    container.innerHTML = `<img class="img-fluid vw-100" src="assets/img/cat.jpg">`
+    container.innerHTML += 
+                        `<div class="position-absolute pb-5">
+                            <button class="border border-dark rounded-pill fs-2 p-3 btn-see-more" onclick="showCatProducts()" id="cats">Veja mais</button>
+                        </div>`
+    containerArrowRight.innerHTML = `<i class="bi bi-caret-right-fill fs-5" onclick="showDogPicture()" style="cursor: pointer;"></i>`;
+}
+
+function showDogPicture() {
+    let container = document.getElementById("container-pictures-homepage");
+    let containerArrowRight = document.getElementById("container-arrow-right");
+    let containerArrowLeft = document.getElementById("container-arrow-left");
+
+    containerArrowRight.innerText = "";
+    container.innerHTML = `<img class="img-fluid vw-100" src="assets/img/dog.jpg">`
+    container.innerHTML += 
+                        `<div class="position-absolute pb-5">
+                            <button class="border border-dark rounded-pill fs-2 p-3 btn-see-more" onclick="showDogProducts()" id="dogs">Veja mais</button>
+                        </div>`
+    containerArrowLeft.innerHTML = `<i class="bi bi-caret-left-fill fs-5" onclick="showCatPicture()" 
+    style="cursor: pointer;"></i>`;
+}
+
+function showCatProducts() {
+    window.open("cat.html", "_self");
+}
+
+function showDogProducts() {
+    window.open("dog.html", "_self");
+}
+
 let dogProducts = [
     {
         name: "Blusa de lã",
