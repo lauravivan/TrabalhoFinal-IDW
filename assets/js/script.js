@@ -62,7 +62,7 @@ function showDetailedProduct(list) {
 
 function showMainOffers() {
     let containerMainOffers = document.getElementById("main-offers");
-    let mainOffers = [catProducts[0], catProducts[3], catProducts[6], catProducts[7], dogProducts[0], dogProducts[1], dogProducts[2]];
+    let mainOffers = [catProducts[0], catProducts[3], catProducts[6], catProducts[7], dogProducts[0], dogProducts[2], dogProducts[3], dogProducts[4]];
     for(let i = 0; i < mainOffers.length; i++) {
         containerMainOffers.innerHTML +=
             `<div class="col-md-4 col-lg-3 col-sm-6 col-12">
@@ -81,9 +81,9 @@ function showCatPicture() {
     let containerArrowLeft = document.getElementById("container-arrow-left");
 
     containerArrowLeft.innerText = "";
-    container.innerHTML = `<img class="img-fluid vw-100" src="assets/img/cat.jpg">`
+    container.innerHTML = `<img class="img-fluid vw-100" src="assets/img/cat.PNG">`
     container.innerHTML += 
-                        `<div class="position-absolute pb-5">
+                        `<div class="position-absolute pb-3">
                             <button class="border border-dark rounded-pill fs-2 p-3 btn-see-more" onclick="showCatProducts()" id="cats">Veja mais</button>
                         </div>`
     containerArrowRight.innerHTML = `<i class="bi bi-caret-right-fill fs-5" onclick="showDogPicture()" style="cursor: pointer;"></i>`;
@@ -95,9 +95,9 @@ function showDogPicture() {
     let containerArrowLeft = document.getElementById("container-arrow-left");
 
     containerArrowRight.innerText = "";
-    container.innerHTML = `<img class="img-fluid vw-100" src="assets/img/dog.jpg">`
+    container.innerHTML = `<img class="img-fluid vw-100" src="assets/img/dog.PNG">`
     container.innerHTML += 
-                        `<div class="position-absolute pb-5">
+                        `<div class="position-absolute pb-3">
                             <button class="border border-dark rounded-pill fs-2 p-3 btn-see-more" onclick="showDogProducts()" id="dogs">Veja mais</button>
                         </div>`
     containerArrowLeft.innerHTML = `<i class="bi bi-caret-left-fill fs-5" onclick="showCatPicture()" 
@@ -126,8 +126,32 @@ let dogProducts = [
         price: "99,90"
     },
     {
-        name: "Alce de pelúcia",
+        name: "Macaco de pelúcia",
         img: "assets/img/dog-products/monkey.jpg",
+        description: "",
+        price: "76,40"
+    },
+    {
+        name: "Biscoitos",
+        img: "assets/img/dog-products/cookies.jpg",
+        description: "",
+        price: "76,40"
+    },
+    {
+        name: "Cachorro de pelúcia",
+        img: "assets/img/dog-products/a-dog-for-a-dog.jpg",
+        description: "",
+        price: "76,40"
+    },
+    {
+        name: "Bolas de morder coloridas",
+        img: "assets/img/dog-products/balls.jpg",
+        description: "",
+        price: "76,40"
+    },
+    {
+        name: "Óculos John Lennon",
+        img: "assets/img/dog-products/glasses.jpg",
         description: "",
         price: "76,40"
     }
@@ -181,5 +205,29 @@ let catProducts = [
         img: "assets/img/cat-products/unicorn-costume.jpg",
         description: "O fecho é de velcro, ajustável à cabeça do seu gato. É super leve, fique tranquilo, o chifre não pesa! Tamanho único",
         price: "59,90"
+    },
+    {
+        name: "Óculos John Lennon",
+        img: "assets/img/cat-products/glasses.jpg",
+        description: "O fecho é de velcro, ajustável à cabeça do seu gato. É super leve, fique tranquilo, o chifre não pesa! Tamanho único",
+        price: "59,90"
+    },
+    {
+        name: "Comedouro raso | sachê",
+        img: "assets/img/cat-products/bowl.jpg",
+        description: "",
+        price: "76,40"
+    },
+    {
+        name: "Suporte 2 alturas | Para comedouro de porcelana",
+        img: "assets/img/cat-products/bowl-and-support.jpg",
+        description: "",
+        price: "76,40"
+    },
+    {
+        name: "Kit comedouros de porcelana | Ração e água",
+        img: "assets/img/cat-products/two-bowls.jpg",
+        description: "",
+        price: "76,40"
     }
 ]
