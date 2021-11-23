@@ -1,11 +1,25 @@
-body, 
-.btn-buy, 
-.btn-see-more {
+.page-font {
     font-family: 'Roboto', sans-serif;
 }
 
-nav {
+.bolder-font-500 {
+    font-weight: 500;
+}
+
+.bolder-font-700 {
+    font-weight: 700;
+}
+
+.bg-color-black {
+    background-color: #000;
+}
+
+.bg-color-lighter {
     background-color: #F8F6F6;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 .page-logo {
@@ -19,40 +33,30 @@ nav {
 
 .product-image {
     max-width: 20vw;
-}
-
-.product-info {
-    cursor: pointer;
+    max-height: 60vh;
 }
 
 .product-info:hover {
     opacity: 0.8;
 }
 
-.product-name, 
-#product-title,
-#product-price {
-    font-weight: 700;
-}
-
-footer {
-    background-color: #000;
-}
-
-.detail-image-container {
-    background-color: #000;
-}
-
-.detail-image {
-    max-width: 24vw;
-}
-
-.btn-see-more {
-    background-color: #F8F6F6;
-    font-weight: 500;
-}
-
 .btn-see-more:hover {
     opacity: 0.9;
     font-size: 1.3rem;
+}
+
+.product-image-cart {
+    max-width: 10vw;
+}
+
+.card-icons {
+    max-width: 5vw;
+}
+
+.btn-go-back {
+    background-color: #FF8A00;
+}
+
+.text-highlight {
+    color: #FF8A00;
 }
