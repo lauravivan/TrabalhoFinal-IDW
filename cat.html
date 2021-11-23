@@ -24,7 +24,7 @@
             </div> 
         </header>
 
-        <nav class="navbar navbar-expand-sm">
+        <nav class="navbar navbar-expand-sm bg-color-lighter">
             <div class="container-fluid">
                 <a class="nav-link text-decoration-none text-reset" href="index.html">Página Inicial</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsed-navbar" aria-expanded="false" aria-controls="#collapsed-navbar">
@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="collapsed-navbar">
                     <a class="nav-link text-decoration-none text-reset" href="about.html">Sobre nós</a>
                     <ul class="navbar-nav ms-auto me-md-4 me-lg-4 d-flex align-items-md-center align-items-lg-center">
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown me-1">
                             <a class="nav-link dropdown-toggle text-decoration-none text-reset" href="#" role="button" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">Minha conta</a>
                             <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
                                 <li>
@@ -44,9 +44,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-reset" href="#">
-                                <i class="bi bi-cart-fill"></i>
+                        <li class="nav-item me-4">
+                            <a class="nav-link text-decoration-none text-reset" href="cart.html">
+                                <i class="bi bi-cart-fill position-relative" id="cart-icon"></i>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -68,7 +68,7 @@
             <img class="w-25" src="https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif">
         </div>
 
-        <footer class="p-5">
+        <footer class="p-5 bg-color-black">
             <div class="container m-5">
                 <div class="row justify-content-md-between pb-5">
                     <div class="col-md-auto">
@@ -135,7 +135,12 @@
         <script type="text/javascript" src="node_modules/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
         <script type="text/javascript">
-            buildHTMLProducts(catProducts, document.getElementById("cat-products"));
+            showProducts(catProducts, document.getElementById("cat-products"));
+            let countPro = localStorage.getItem('countage products'); 
+            if (parseInt(countPro) > 0) {
+                let cartIcon = document.getElementById("cart-icon");
+                cartIcon.innerHTML = `<span class="badge rounded-pill bg-dark position-absolute">${countPro}</span>`;
+            }
         </script>
     </body>
 </html>

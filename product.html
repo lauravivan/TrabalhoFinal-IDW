@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <title>Gatos</title>
     </head>
-    <body>
+    <body class="page-font">
         <header class="bg-light">
             <div class="text-center p-5">
                 <a href="index.html">
@@ -24,7 +24,7 @@
             </div> 
         </header>
 
-        <nav class="navbar navbar-expand-sm">
+        <nav class="navbar navbar-expand-sm bg-color-lighter">
             <div class="container-fluid">
                 <a class="nav-link text-decoration-none text-reset" href="index.html">Página Inicial</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsed-navbar" aria-expanded="false" aria-controls="#collapsed-navbar">
@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="collapsed-navbar">
                     <a class="nav-link text-decoration-none text-reset" href="about.html">Sobre nós</a>
                     <ul class="navbar-nav ms-auto me-md-4 me-lg-4 d-flex align-items-md-center align-items-lg-center">
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown me-1">
                             <a class="nav-link dropdown-toggle text-decoration-none text-reset" href="#" role="button" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">Minha conta</a>
                             <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
                                 <li>
@@ -44,9 +44,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-reset" href="#">
-                                <i class="bi bi-cart-fill"></i>
+                        <li class="nav-item me-4">
+                            <a class="nav-link text-decoration-none text-reset" href="cart.html">
+                                <i class="bi bi-cart-fill position-relative" id="cart-icon"></i>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -61,28 +61,39 @@
    
         <section class="mt-5 mb-5">
             <div class="d-flex justify-content-evenly ms-5 me-5">
-                <div class="text-center">
-                    <div class="detail-image-container w-100" id="detail-image-container"></div>
-                </div>
+                <div class="text-center" id="clicked-product-img"></div>
                 <div class="d-flex flex-column w-50">
                     <div>
-                        <h2 class="text-uppercase fs-1" id="product-title"></h2>
+                        <div id="product-title-container"></div>
                         <p class="fs-4" id="product-description"></p>
-                        <p class="fs-3" id="product-price"></p>
+                        <p class="fs-3 bolder-font-700" id="product-price"></p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p class="fs-4">Quantidade:</p>
+                        &nbsp;
+                        <select class="form-select" style="width: 6vw; height: 6vh;" id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
                     </div>
                     <div class="d-grid gap-5 mt-auto pb-3">
                         <div class="text-center">
-                            <button class="btn btn-dark btn-buy btn-lg p-2">
+                            <button class="btn btn-dark page-font btn-lg p-2" type="button" onclick="buyProduct()">
                                 <i class="bi bi-cart-fill text-white"></i>
                                 Eu quero!
                             </button>
                         </div>
                     </div>
+                    <div id="alert"></div>
                 </div>
             </div>
         </section>
 
-        <footer class="p-5">
+        <footer class="p-5 bg-color-black">
             <div class="container m-5">
                 <div class="row justify-content-md-between pb-5">
                     <div class="col-md-auto">
@@ -149,7 +160,12 @@
         <script type="text/javascript" src="node_modules/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
         <script type="text/javascript">
-            discoverSelectedProduct();
+            discoverClickedProduct();
+            let countPro = localStorage.getItem('countage products'); 
+            if (parseInt(countPro) > 0) {
+                let cartIcon = document.getElementById("cart-icon");
+                cartIcon.innerHTML = `<span class="badge rounded-pill bg-dark position-absolute">${countPro}</span>`;
+            }
         </script>
     </body>
 </html>
