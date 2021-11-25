@@ -91,6 +91,8 @@ function buyProduct() {
     } else {
         let productTitleElement = document.getElementById("product-title").getAttribute("name");
         let quantitySelected = document.getElementById("quantity").value;
+        let divAlert = document.getElementById("alert");
+        divAlert.innerHTML = `<div class="alert alert-warning" role="alert">Este item foi adicionado ao seu carrinho!</div>`
         cartProductsCount++;
         localStorage.setItem('CartProductsCount', JSON.stringify(cartProductsCount));
         cartCount();
