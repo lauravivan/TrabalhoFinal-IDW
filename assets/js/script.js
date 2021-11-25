@@ -7,6 +7,30 @@ function userLogin() {
     }
 }
 
+function recoverPassword() {
+    let userEmailAdress = document.getElementById("email-adress").value;
+    let password = document.getElementById("user-password").value;
+    let passwordConfirmation = document.getElementById("user-password-confirmation").value;
+    let alertDiv = document.getElementById("alert");
+    alertDiv.innerText = "";
+    if (password == passwordConfirmation) {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].emailAdress == userEmailAdress) {
+                users[i].password = passwordConfirmation;
+            }
+        }
+
+        localStorage.setItem('Users', JSON.stringify(users));
+        alertDiv.innerHTML = `<div class="alert alert-warning" role="alert">Senha cadastrada com sucesso!</div>`
+
+        setTimeout(function() {
+            window.open("login.html", "_self");
+        }, 1000);
+    } else {
+        alertDiv.innerHTML = `<div class="alert alert-warning" role="alert">A sua senha está incorreta!</div>`;
+    }
+}
+
 function cartCount() {
     if (cartProductsCount > 0) {
         let cartIcon = document.getElementById("cart-icon");
@@ -185,7 +209,7 @@ function login() {
             userDoesntExist = false;
             setTimeout(function() {
                 window.open("index.html", "_self");
-            }, 2000);
+            }, 1000);
         }
     }
     if (userDoesntExist) {
