@@ -95,6 +95,7 @@ function putProductInTheCart(product, quantity) {
             quantity: quantity
         }
     );
+
     localStorage.setItem('CartProducts', JSON.stringify(cartProducts));
 }
 
@@ -226,10 +227,10 @@ function addDeliverAdress() {
 }
 
 function userCardChoices() {
-    chosenCard.push({
+    chosenCard = {
         card: document.querySelector('input[name=card]:checked').value,
         cardImg: document.querySelector('input[name=card-img]:checked').value
-    });
+    };
 
     localStorage.setItem('ChosenCard', JSON.stringify(chosenCard));
 }
@@ -397,3 +398,5 @@ let users = JSON.parse(localStorage.getItem('Users')) || [];
 let cartProducts = JSON.parse(localStorage.getItem('CartProducts')) || [];
 
 let loggedUser = localStorage.getItem('LoggedUser') || "";
+
+let total = JSON.parse(localStorage.getItem('Total')) || 0;
