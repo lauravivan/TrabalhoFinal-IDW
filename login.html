@@ -19,28 +19,20 @@
                 <div class="col p-5 border-end">
                     <div class="row">
                         <div class="col">
-                            <div class="form" method='POST'>
-                                <div class="row mb-3">
-                                    <div class="col-12 mb-3">
-                                        <input type="email" placeholder="Digite seu endereço de e-mail" class="form-control" id="email-adress" name="email-adress" required>
-                                    </div>
+                            <form method="post">
+                                <div class="mb-3">
+                                    <input type="email" placeholder="Digite seu endereço de e-mail" class="form-control" id="email-adress" name="email-adress" required>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 mb-3">
-                                        <input type="password" placeholder="Digite sua senha" class="form-control" id="user-password" name="user-password" required>
-                                    </div>
+                                <div class="mb-3">
+                                    <input type="password" placeholder="Digite sua senha" class="form-control" id="user-password" name="user-password" required>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 mb-3">
-                                        <div id="alert"></div>
-                                    </div>
+                                <div class="mb-3">
+                                    <div id="alert"></div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <button class="btn btn-dark w-100" type="submit" onclick="login()">Entrar</button>
-                                    </div>
+                                <div>
+                                    <input class="btn btn-dark w-100" type="button" value="Entrar" onclick="login()">
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
 
