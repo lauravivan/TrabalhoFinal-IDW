@@ -172,6 +172,9 @@ function registerUser() {
 function login() {
     let emailAdress = document.getElementById("email-adress").value;
     let userPassword = document.getElementById("user-password").value;
+
+    console.log(emailAdress)
+    console.log(userPassword)
     let alertDiv = document.getElementById("alert");
     alertDiv.innerText = "";
     let userDoesntExist = true;
@@ -223,9 +226,8 @@ function addDeliverAdress() {
                 localStorage.setItem('Users', JSON.stringify(users));
             }
         }
+        window.open("payment-form.html", "_self");
     }
-
-    window.open("payment-form.html", "_self");
 }
 
 function userCardChoices() {
@@ -235,6 +237,8 @@ function userCardChoices() {
     };
 
     localStorage.setItem('ChosenCard', JSON.stringify(chosenCard));
+
+    window.open("payment-form-info.html", "_self");
 }
 
 function addCardInformation() {
@@ -242,6 +246,11 @@ function addCardInformation() {
     let cardNumber = document.getElementById("card-number").value;
     let cardCode = document.getElementById("card-code").value;
     let expireCardDate = document.getElementById("expire-card-date").value;
+
+    let parcelsSelect = document.getElementById("parcels");
+    parcels = parcelsSelect.options[parcelsSelect.selectedIndex].value;
+
+    localStorage.setItem('Parcels', parcels);
 
     if(cardName.length > 0 && (cardNumber.length > 0) && (cardCode.length > 0)
                 && (expireCardDate.length > 0)) {
@@ -266,11 +275,8 @@ function addCardInformation() {
                 localStorage.setItem('Users', JSON.stringify(users));
             }
         }
+        window.open("order-confirmation.html", "_self");
     }
-    let parcelsSelect = document.getElementById("parcels");
-    parcels = parcelsSelect.options[parcelsSelect.selectedIndex].value;
-
-    localStorage.setItem('Parcels', parcels);
 }
 
 let dogProducts = [

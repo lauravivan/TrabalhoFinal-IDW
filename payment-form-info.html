@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <form method="POST" action="order-confirmation.html">
+                        <form method="post">
                             <fieldset>
                                 <legend>Informações de pagamento</legend>
                                 <div class="row mb-4">
@@ -56,7 +56,7 @@
                                 </div>
                             </fieldset>
                             <div class="d-flex justify-content-end mt-5">
-                                <button class="btn btn-dark" type="submit" onclick="addCardInformation()">Avançar</button>
+                                <input class="btn btn-dark" type="button" value="Avançar" onclick="addCardInformation()">
                             </div>
                         </form>
                     </div>
@@ -88,11 +88,11 @@
 
             let parcelsSelect = document.getElementById("parcels");
             parcelsSelect.innerHTML = `<option value="${total}">À VISTA NO CARTÃO NO VALOR DE R$${total}</option>
-                                        <option value="${twoParcels}">2 X R$${twoParcels} SEM JUROS</option>
-                                        <option value="${threeParcels}">3 X R$${threeParcels} SEM JUROS</option>
-                                        <option value="${fourParcels}">4 X R$${fourParcels} SEM JUROS</option>
-                                        <option value="${fiveParcels}">5 X R$${fiveParcels} SEM JUROS</option>
-                                        <option value="${sixParcels}">6 X R$${sixParcels} SEM JUROS</option>`
+                                        <option value="2 X R$${twoParcels} SEM JUROS">2 X R$${twoParcels} SEM JUROS</option>
+                                        <option value="3 X R$${threeParcels} SEM JUROS">3 X R$${threeParcels} SEM JUROS</option>
+                                        <option value="4 X R$${fourParcels} SEM JUROS">4 X R$${fourParcels} SEM JUROS</option>
+                                        <option value="5 X R$${fiveParcels} SEM JUROS">5 X R$${fiveParcels} SEM JUROS</option>
+                                        <option value="6 X R$${sixParcels} SEM JUROS">6 X R$${sixParcels} SEM JUROS</option>`
         </script>
     </body>
 </html>
