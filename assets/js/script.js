@@ -1,7 +1,7 @@
 function userLogin() {
     if (loggedUser.length > 0) {
         document.getElementById("user-login").innerHTML = `<span class="dropdown-item bolder-font-700">Olá ${localStorage.getItem('LoggedUser')}</span>`;
-        document.getElementById("user-logout").innerHTML = `<span class="dropdown-item cursor-pointer" onclick="userLogout()">Sair</span>`;
+        document.getElementById("user-logout").innerHTML = `<span class="dropdown-item cursor-pointer" onclick="userLogout()">Sair <i class="bi bi-box-arrow-in-right"></i></span>`;
     } else {
         document.getElementById("user-login").innerHTML = `<a class="dropdown-item" href="login.html">Fazer login</a>`;
     }
@@ -224,6 +224,8 @@ function addDeliverAdress() {
             }
         }
     }
+
+    window.open("payment-form.html", "_self");
 }
 
 function userCardChoices() {
@@ -265,6 +267,10 @@ function addCardInformation() {
             }
         }
     }
+    let parcelsSelect = document.getElementById("parcels");
+    parcels = parcelsSelect.options[parcelsSelect.selectedIndex].value;
+
+    localStorage.setItem('Parcels', parcels);
 }
 
 let dogProducts = [
@@ -400,3 +406,5 @@ let cartProducts = JSON.parse(localStorage.getItem('CartProducts')) || [];
 let loggedUser = localStorage.getItem('LoggedUser') || "";
 
 let total = JSON.parse(localStorage.getItem('Total')) || 0;
+
+let parcels = localStorage.getItem('Parcels') || "";
