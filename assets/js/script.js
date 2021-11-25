@@ -213,7 +213,7 @@ function addDeliverAdress() {
                 && (cep.length > 0) && (city.length > 0) && (state.length > 0)) {
         for (let i = 0; i < users.length; i++) {
             if (loggedUser == users[i].firstName) {
-                users[i].deliverAdress.push({
+                users[i].deliverAdress = {
                     streetAdress: streetAdress,
                     homeNumber: homeNumber,
                     complement: complement,
@@ -221,7 +221,7 @@ function addDeliverAdress() {
                     cep: cep,
                     city: city,
                     state: state
-                })
+                }
 
                 localStorage.setItem('Users', JSON.stringify(users));
             }
@@ -257,19 +257,19 @@ function addCardInformation() {
         for (let i = 0; i < users.length; i++) {
             if (loggedUser == users[i].firstName) {
                 if (chosenCard.card == "credit card") {
-                    users[i].creditCard.push({
+                    users[i].creditCard = {
                         cardName: cardName,
                         cardNumber: cardNumber,
                         cardCode: cardCode,
                         expireCardDate: expireCardDate
-                    })
+                    }
                 } else {
-                    users[i].debitCard.push({
+                    users[i].debitCard = {
                         cardName: cardName,
                         cardNumber: cardNumber,
                         cardCode: cardCode,
                         expireCardDate: expireCardDate
-                    })
+                    }
                 }
 
                 localStorage.setItem('Users', JSON.stringify(users));
@@ -277,6 +277,25 @@ function addCardInformation() {
         }
         window.open("order-confirmation.html", "_self");
     }
+}
+
+function finalizeOrderFinal() {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].firstName == loggedUser) {
+            users[i].orders.push({
+                itens: cartProducts,
+                total: total,
+                parcels: parcels
+            })
+        }
+    }
+    localStorage.setItem('Users', JSON.stringify(users));
+    localStorage.removeItem('CartProducts');
+    localStorage.removeItem('CartProductsCount');
+
+    setTimeout(function() {
+        window.open("message.html", "_self");
+    }, 1000);
 }
 
 let dogProducts = [
