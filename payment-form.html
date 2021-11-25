@@ -18,71 +18,69 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <form method="post">
-                            <fieldset>
-                                <legend>Forma de pagamento</legend>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="card" id="credit-card" value="credit card" required>
-                                            <label class="form-check-label" for="credit-card">
-                                              Cartão de crédito
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="card" id="debit-card" value="debit card" required>
-                                            <label class="form-check-label" for="debit-card">
-                                              Cartão de débito
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <input class="form-check-input" type="radio" name="card-img" id="visa" value="visa" required>
-                                        &nbsp;
-                                        <label class="form-check-label" for="visa">
-                                            <img class="img-fluid" src="assets/img/card-icons/visa.png">
-                                        </label>
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-check-input" type="radio" name="card-img" id="mastercard" value="mastercard" required>
-                                        &nbsp;
-                                        <label class="form-check-label" for="mastercard">
-                                            <img class="img-fluid" src="assets/img/card-icons/mastercard.png">
-                                        </label>
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-check-input" type="radio" name="card-img" id="elo" value="elo" required>
-                                        &nbsp;
-                                        <label class="form-check-label" for="elo">
-                                            <img class="img-fluid" src="assets/img/card-icons/elo.png">
-                                        </label>
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-check-input" type="radio" name="card-img" id="hipercard" value="hipercard" required>
-                                        &nbsp;
-                                        <label class="form-check-label" for="hipercard">
-                                            <img class="img-fluid" src="assets/img/card-icons/hipercard.png">
-                                        </label>
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-check-input" type="radio" name="card-img" id="american-express" value="american express" required>
-                                        &nbsp;
-                                        <label class="form-check-label" for="american-express">
-                                            <img class="img-fluid" src="assets/img/card-icons/american-ex.png">
+                        <fieldset>
+                            <legend>Forma de pagamento</legend>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="card" id="credit-card" value="credit card" required>
+                                        <label class="form-check-label" for="credit-card">
+                                            Cartão de crédito
                                         </label>
                                     </div>
                                 </div>
-                            </fieldset>
-                            <div class="d-flex justify-content-end mt-5">
-                                <input class="btn btn-dark" type="button" value="Avançar" onclick="userCardChoices()">
                             </div>
-                        </form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="card" id="debit-card" value="debit card" required>
+                                        <label class="form-check-label" for="debit-card">
+                                            Cartão de débito
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-check-input" type="radio" name="card-img" id="visa" value="visa" required>
+                                    &nbsp;
+                                    <label class="form-check-label" for="visa">
+                                        <img class="img-fluid" src="assets/img/card-icons/visa.png">
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-check-input" type="radio" name="card-img" id="mastercard" value="mastercard" required>
+                                    &nbsp;
+                                    <label class="form-check-label" for="mastercard">
+                                        <img class="img-fluid" src="assets/img/card-icons/mastercard.png">
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-check-input" type="radio" name="card-img" id="elo" value="elo" required>
+                                    &nbsp;
+                                    <label class="form-check-label" for="elo">
+                                        <img class="img-fluid" src="assets/img/card-icons/elo.png">
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-check-input" type="radio" name="card-img" id="hipercard" value="hipercard" required>
+                                    &nbsp;
+                                    <label class="form-check-label" for="hipercard">
+                                        <img class="img-fluid" src="assets/img/card-icons/hipercard.png">
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-check-input" type="radio" name="card-img" id="american-express" value="american express" required>
+                                    &nbsp;
+                                    <label class="form-check-label" for="american-express">
+                                        <img class="img-fluid" src="assets/img/card-icons/american-ex.png">
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="d-flex justify-content-end mt-5">
+                            <button class="btn btn-dark" type="button" onclick="userCardChoices()">Avançar</button>
+                        </div>
                     </div>
                 </div>
             </div>

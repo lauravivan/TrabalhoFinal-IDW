@@ -16,64 +16,58 @@
     <body class="d-grid h-100 page-font">
         <section class="m-auto position-relative bg-light w-75 container border">
             <div class="row">
-                <div class="col p-5 border-end">
-                    <div class="row">
-                        <div class="col">
-                            <form method="post">
-                                <div class="row">
-                                    <div class="col-12 mb-3">
-                                        <input type="email" placeholder="Digite seu endereço de e-mail" class="form-control" id="email-adress" name="email-adress" required>
-                                    </div>
+                <div class="col-12 col-lg-6 border-end border-bottom">
+                    <div class="p-1 p-sm-5 p-md-5 p-lg-5">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <input type="email" placeholder="Digite seu endereço de e-mail" class="form-control" id="email-adress" name="email-adress" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <input type="text" placeholder="Digite seu nome" class="form-control" id="first-name" name="first-name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 mb-3">
+                                <input type="password" placeholder="Crie sua senha aqui" class="form-control" id="user-password" name="user-password" required>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 mb-3">
+                                <input type="password" placeholder="Confirme sua senha" class="form-control" id="user-confirmation-password" name="user-confirmation-password" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="alert"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <p>Ao criar uma conta, você concorda com os <span class="text-highlight text-decoration-underline">Termos e Condições de Uso</span> da OurPetStore. Para saber como tratamos os seus dados pessoais, acesse o nosso <span class="text-highlight text-decoration-underline">Aviso de Privacidade</span>.</p>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 mb-3">
-                                        <input type="text" placeholder="Digite seu nome" class="form-control" id="first-name" name="first-name" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 mb-3">
-                                        <input type="password" placeholder="Crie sua senha aqui" class="form-control" id="user-password" name="user-password" required>
-                                    </div>
-                                    <div class="col-6 mb-3">
-                                        <input type="password" placeholder="Confirme sua senha" class="form-control" id="user-confirmation-password" name="user-confirmation-password" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div id="alert"></div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="text-center">
-                                            <p>Ao criar uma conta, você concorda com os <span class="text-highlight text-decoration-underline">Termos e Condições de Uso</span> da PetOurStore. Para saber como tratamos os seus dados pessoais, acesse o nosso <span class="text-highlight text-decoration-underline">Aviso de Privacidade</span>.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 mb-3">
-                                        <input class="btn btn-dark w-100" type="button" value="Cadastrar" onclick="registerUser()">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <a class="btn text-decoration-none text-white w-100" href="index.html" style="background-color: #FF8A00;">Voltar</a>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <button class="btn btn-dark w-100" type="button" onclick="registerUser()">Cadastrar</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <a class="btn text-decoration-none text-white w-100" href="index.html" style="background-color: #FF8A00;">Voltar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col p-5">
-                    <div class="row">
-                        <div class="col">
-                            <div class="mb-3 text-center">
-                                <h3 class="bolder-font-700">OLÁ!<br>QUE BOM TER VOCÊ POR AQUI</h3>
-                                <small>COMPRE COISINHAS PARA O SEU PET FICAR NO ESTILO</small>
-                            </div>
-                            <div class="text-center">
-                                <img class="rounded-circle img-fluid" src="assets/img/cat-and-dog.jpg">
-                            </div>
+                <div class="col-12 col-lg-6">
+                    <div class="p-3 p-sm-5 p-md-5 p-lg-5">
+                        <div class="mb-3 text-center">
+                            <h3 class="bolder-font-700">OLÁ!<br>QUE BOM TER VOCÊ POR AQUI</h3>
+                            <small>COMPRE COISINHAS PARA O SEU PET FICAR NO ESTILO</small>
+                        </div>
+                        <div class="text-center">
+                            <img class="rounded-circle img-fluid" src="assets/img/cat-and-dog.jpg">
                         </div>
                     </div>
                 </div>

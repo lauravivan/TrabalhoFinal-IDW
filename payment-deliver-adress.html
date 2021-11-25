@@ -18,48 +18,46 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <form method="post">
-                            <fieldset>
-                                <legend>Endereço de entrega</legend>
-                                <div class="row">
-                                    <div class="col-8 mb-3">
-                                        <label class="form-label" for="street">Rua</label>
-                                        <input type="text" placeholder="rua" class="form-control" id="street" name="street" required>
-                                    </div>
-                                    <div class="col-4 mb-3"> 
-                                        <label class="form-label" for="home-number">Número</label>
-                                        <input type="number" class="form-control" placeholder="número" id="home-number" name="home-number" required>
-                                    </div>
-                                    <div class="col-12 mb-3"> 
-                                        <label class="form-label" for="complement">Complemento</label>
-                                        <input type="text" class="form-control" placeholder="complemento" id="complement" name="complement">
-                                    </div>
+                        <fieldset>
+                            <legend>Endereço de entrega</legend>
+                            <div class="row">
+                                <div class="col-8 mb-3">
+                                    <label class="form-label" for="street">Rua</label>
+                                    <input type="text" placeholder="rua" class="form-control" id="street" name="street" required>
                                 </div>
-                                <div class="row">
-                                    <div class="col-6 mb-3"> 
-                                        <label class="form-label" for="district">Bairro</label>
-                                        <input type="text" class="form-control" placeholder="bairro" id="district" name="district" required>
-                                    </div>
-                                    <div class="col-6 mb-3"> 
-                                        <label class="form-label" for="cep">CEP</label>
-                                        <input type="text" class="form-control" placeholder="CEP" id="cep" name="cep" required>
-                                    </div>
+                                <div class="col-4 mb-3"> 
+                                    <label class="form-label" for="home-number">Número</label>
+                                    <input type="number" class="form-control" placeholder="número" id="home-number" name="home-number" required>
                                 </div>
-                                <div class="row">
-                                    <div class="col-8 mb-3"> 
-                                        <label class="form-label" for="city">Cidade</label>
-                                        <input type="text" class="form-control" placeholder="cidade" name="city" id="city" required>
-                                    </div>
-                                    <div class="col-4 mb-3"> 
-                                        <label class="form-label" for="state">Estado</label>
-                                        <input type="text" class="form-control" placeholder="estado" name="state" id="state" required>
-                                    </div>
+                                <div class="col-12 mb-3"> 
+                                    <label class="form-label" for="complement">Complemento</label>
+                                    <input type="text" class="form-control" placeholder="complemento" id="complement" name="complement">
                                 </div>
-                            </fieldset>
-                            <div class="d-flex justify-content-end mt-3">
-                                <input class="btn btn-dark" type="button" value="Avançar" onclick="addDeliverAdress()">
                             </div>
-                        </form>
+                            <div class="row">
+                                <div class="col-6 mb-3"> 
+                                    <label class="form-label" for="district">Bairro</label>
+                                    <input type="text" class="form-control" placeholder="bairro" id="district" name="district" required>
+                                </div>
+                                <div class="col-6 mb-3"> 
+                                    <label class="form-label" for="cep">CEP</label>
+                                    <input type="text" class="form-control" placeholder="CEP" id="cep" name="cep" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8 mb-3"> 
+                                    <label class="form-label" for="city">Cidade</label>
+                                    <input type="text" class="form-control" placeholder="cidade" name="city" id="city" required>
+                                </div>
+                                <div class="col-4 mb-3"> 
+                                    <label class="form-label" for="state">Estado</label>
+                                    <input type="text" class="form-control" placeholder="estado" name="state" id="state" required>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-dark" type="button" onclick="addDeliverAdress()">Avançar</button>
+                        </div>
                     </div>
                 </div>
         </section>

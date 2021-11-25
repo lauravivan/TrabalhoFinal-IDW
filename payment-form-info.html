@@ -18,47 +18,45 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <form method="post">
-                            <fieldset>
-                                <legend>Informações de pagamento</legend>
-                                <div class="row mb-4">
-                                    <div class="col">
-                                        <div id="chosen-card"></div>
-                                    </div>
+                        <fieldset>
+                            <legend>Informações de pagamento</legend>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div id="chosen-card"></div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 mb-3">
-                                        <label class="form-label" for="card-name">Nome no cartão</label>
-                                        <input type="text" placeholder="nome no cartão" class="form-control" id="card-name" name="card-name" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 mb-3">
-                                        <label class="form-label" for="card-number">Número</label>
-                                        <input type="text" placeholder="número" class="form-control" id="card-number" name="card-number" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4 mb-3">
-                                        <label class="form-label" for="card-code">Código</label>
-                                        <input type="text" placeholder="código" class="form-control" id="card-code" name="card-code" required>
-                                    </div>
-                                    <div class="col-8 mb-3">
-                                        <label class="form-label" for="expire-card-date">Data de validade</label>
-                                        <input type="date" placeholder="data de validade" class="form-control" id="expire-card-date" name="expire-card-date" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col"> 
-                                        <label for="parcels">Parcelas</label>
-                                        <select class="form-select form-select-md" id="parcels"></select>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <div class="d-flex justify-content-end mt-5">
-                                <input class="btn btn-dark" type="button" value="Avançar" onclick="addCardInformation()">
                             </div>
-                        </form>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label class="form-label" for="card-name">Nome no cartão</label>
+                                    <input type="text" placeholder="nome no cartão" class="form-control" id="card-name" name="card-name" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label class="form-label" for="card-number">Número</label>
+                                    <input type="text" placeholder="número" class="form-control" id="card-number" name="card-number" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 mb-3">
+                                    <label class="form-label" for="card-code">Código</label>
+                                    <input type="text" placeholder="código" class="form-control" id="card-code" name="card-code" required>
+                                </div>
+                                <div class="col-8 mb-3">
+                                    <label class="form-label" for="expire-card-date">Data de validade</label>
+                                    <input type="date" placeholder="data de validade" class="form-control" id="expire-card-date" name="expire-card-date" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"> 
+                                    <label for="parcels">Parcelas</label>
+                                    <select class="form-select form-select-md" id="parcels"></select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="d-flex justify-content-end mt-5">
+                            <button class="btn btn-dark" type="button" onclick="addCardInformation()">Avançar</button>
+                        </div>
                     </div>
                 </div>
             </div>
