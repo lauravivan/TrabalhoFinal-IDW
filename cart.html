@@ -14,7 +14,7 @@
 
         <script src="assets/js/header.js"></script>
         <script src="assets/js/nav.js"></script>
-        <title>Homepage</title>
+        <title>Carrinho</title>
     </head>
     <body class="page-font">
         <section id="cart-container"></section>
@@ -31,60 +31,64 @@
 
             if (cartProducts.length > 0) {
                 cartContainer.innerHTML = 
-                    `<h2 class="fs-2 m-5 bolder-font-700">Meu carrinho</h2>
-                    <div class="d-flex flex-column">
-                        <div class="d-flex justify-content-center">
-                            <table class="table table-borderless w-75 text-center">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th class="bolder-font-700 fs-4">Nome do produto</th>
-                                        <th class="bolder-font-700 fs-4">Quantidade</th>
-                                        <th class="bolder-font-700 fs-4">Preço</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="cart-products-container"></tbody>
-                            </table>
-                        </div>
-                        <div class="mt-5 mb-5">
-                            <div class="d-flex justify-content-center mb-5">
-                                <p class="fs-3 bolder-font-700">Valor total:</p>
-                                &nbsp;&nbsp;
-                                <p class="fs-3 shadow-sm" id="total"></p>
+                    `<div class="container pb-3 pt-3 p-sm-5 p-md-5 p-lg-5">
+                        <div class="row mb-5">
+                            <div class="col">
+                                <div class="text-center">
+                                    <h3 class="fs-4 mb-5 bolder-font-700">Meu carrinho</h3>
+                                    <table class="table text-center">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="bolder-font-700 h6">Nome do produto</th>
+                                                <th class="bolder-font-700 h6">Quantidade</th>
+                                                <th class="bolder-font-700 h6">Preço</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cart-products-container"></tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between ms-5 me-5">
-                                <a class="btn btn-dark btn-lg text-decoration-none" href="index.html">Voltar às compras</a>
-                                <button class="btn btn-dark btn-lg" onclick="finalizeOrder()">Finalizar pedido</button>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex justify-content-center">
+                                    <p class="fs-3 bolder-font-700">Valor total:</p>
+                                    &nbsp;
+                                    <p class="fs-3" id="total"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <a class="btn btn-dark text-decoration-none" href="index.html">Voltar às compras</a>
+                            </div>
+                            <div>
+                                <button class="btn btn-dark" onclick="finalizeOrder()">Finalizar pedido</button>
                             </div>
                         </div>
                     </div>`
                 let cartProductsContainer = document.getElementById("cart-products-container");
                 for (let i = 0; i < cartProducts.length; i++) {
                     cartProductsContainer.innerHTML += 
-                                    `<tr class="shadow-sm mb-5">
-                                        <td class="p-3">
-                                            <img class="shadow-sm" src="${cartProducts[i].product.img}" style="max-width: 10vw;">
-                                        </td>
-                                        <td class="p-3">
-                                            <div class="h-100 w-100 p-5 shadow-sm">
-                                                <p class="fs-5">${cartProducts[i].product.name}</p>
-                                            </div>
-                                        </td>
-                                        <td class="p-3">
-                                            <div class="h-100 w-100 p-5 shadow-sm">
-                                                <p class="bolder-font-700">${cartProducts[i].quantity}</p>
-                                            </div>
-                                        </td>
-                                        <td class="p-3">
-                                            <div class="d-flex align-items-center">
-                                                <div class="h-100 w-100 p-5 shadow-sm">
-                                                    <p>${cartProducts[i].product.price}</p>
-                                                </div>
-                                                &nbsp;&nbsp;
-                                                <i class="bi bi-trash-fill fs-5 cursor-pointer" id="${productId++}" onclick="takeProductOutOfCart(this.id)"></i>
-                                            </div>
-                                        </td>
-                                    </tr>`
+                                `<tr>
+                                    <td>
+                                        <img src="${cartProducts[i].product.img}" style="min-width: 7vw; max-width: 12vw;">
+                                    </td>
+                                    <td>
+                                        <span>${cartProducts[i].product.name}</span>
+                                    </td>
+                                    <td>
+                                        <span class="bolder-font-700">${cartProducts[i].quantity}</span>
+                                    </td>
+                                    <td>
+                                        <span>${cartProducts[i].product.price}</span>
+                                    </td>
+                                    <td>
+                                        <i class="bi bi-trash-fill fs-5 cursor-pointer" id="${productId++}" onclick="takeProductOutOfCart(this.id)"></i>
+                                    </td>
+                                </tr>`
                     totalValue += parseFloat(cartProducts[i].product.price) * parseInt(cartProducts[i].quantity);
                 }
                 document.getElementById("total").innerText = `R$ ${totalValue.toFixed(2)}`;
