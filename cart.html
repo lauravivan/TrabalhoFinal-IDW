@@ -26,11 +26,10 @@
             userLogin();
             cartCount();
             let cartContainer = document.getElementById("cart-container");
-            let allCartProducts = JSON.parse(localStorage.getItem('CartProducts'));
             let totalValue = 0;
             let productId = 0;
 
-            if (allCartProducts.length > 0) {
+            if (cartProducts.length > 0) {
                 cartContainer.innerHTML = 
                     `<h2 class="fs-2 m-5 bolder-font-700">Meu carrinho</h2>
                     <div class="d-flex flex-column">
@@ -60,35 +59,36 @@
                         </div>
                     </div>`
                 let cartProductsContainer = document.getElementById("cart-products-container");
-                for (let i = 0; i < allCartProducts.length; i++) {
+                for (let i = 0; i < cartProducts.length; i++) {
                     cartProductsContainer.innerHTML += 
                                     `<tr class="shadow-sm mb-5">
                                         <td class="p-3">
-                                            <img class="shadow-sm" src="${allCartProducts[i].product.img}" style="max-width: 10vw;">
+                                            <img class="shadow-sm" src="${cartProducts[i].product.img}" style="max-width: 10vw;">
                                         </td>
                                         <td class="p-3">
                                             <div class="h-100 w-100 p-5 shadow-sm">
-                                                <p class="fs-5">${allCartProducts[i].product.name}</p>
+                                                <p class="fs-5">${cartProducts[i].product.name}</p>
                                             </div>
                                         </td>
                                         <td class="p-3">
                                             <div class="h-100 w-100 p-5 shadow-sm">
-                                                <p class="bolder-font-700">${allCartProducts[i].quantity}</p>
+                                                <p class="bolder-font-700">${cartProducts[i].quantity}</p>
                                             </div>
                                         </td>
                                         <td class="p-3">
                                             <div class="d-flex align-items-center">
                                                 <div class="h-100 w-100 p-5 shadow-sm">
-                                                    <p>${allCartProducts[i].product.price}</p>
+                                                    <p>${cartProducts[i].product.price}</p>
                                                 </div>
                                                 &nbsp;&nbsp;
                                                 <i class="bi bi-trash-fill fs-5 cursor-pointer" id="${productId++}" onclick="takeProductOutOfCart(this.id)"></i>
                                             </div>
                                         </td>
                                     </tr>`
-                    totalValue += parseFloat(allCartProducts[i].product.price) * parseInt(allCartProducts[i].quantity);
+                    totalValue += parseFloat(cartProducts[i].product.price) * parseInt(cartProducts[i].quantity);
                 }
                 document.getElementById("total").innerText = `R$ ${totalValue.toFixed(2)}`;
+                localStorage.setItem('Total', JSON.stringify(totalValue.toFixed(2)));
             } else {
                 cartContainer.innerHTML = `<p class="bolder-font-700 text-center fs-3 m-5">Você ainda não escolheu nenhum produto</p>`;
             }
