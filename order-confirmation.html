@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="d-grid h-100" lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +13,99 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <title>Confirmação de compra</title>
     </head>
-    <body class="page-font">
+    <body class="d-grid h-100 page-font">
+        <section class="mt-auto mb-auto position-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-3 col-lg-8">
+                        <div class="border border-dark rounded p-3">
+                            <h3 class="fs-4 m-3 bolder-font-700">Meus itens</h3>
+                            <table class="table table-borderless text-center table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="bolder-font-700 h6">Nome do produto</th>
+                                        <th class="bolder-font-700 h6">Quantidade</th>
+                                        <th class="bolder-font-700 h6">Preço</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cart-products-container"></tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-4">
+                        <div class="border border-dark rounded p-5">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <h2 class="bolder-font-700">RESUMO DA COMPRA</h2>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <span>SUBTOTAL</span>
+                                </div>
+                                <div class="col">
+                                    <span id="subtotal"></span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <span>ENTREGA</span>
+                                </div>
+                                <div class="col">
+                                    <span>Frete grátis</span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <span>TOTAL</span>
+                                </div>
+                                <div class="col">
+                                    <span id="order-total"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="text-center">
+                                        <button class="btn btn-dark" onclick="finalizeOrderFinal()">Finalizar compra</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript">
+            let cartProductsContainer = document.getElementById("cart-products-container");
+            for (let i = 0; i < cartProducts.length; i++) {
+                cartProductsContainer.innerHTML += 
+                                `<tr>
+                                    <td>
+                                        <img src="${cartProducts[i].product.img}" style="min-width: 7vw; max-width: 12vw;">
+                                    </td>
+                                    <td>
+                                        <span>${cartProducts[i].product.name}</span>
+                                    </td>
+                                    <td>
+                                        <span class="bolder-font-700">${cartProducts[i].quantity}</span>
+                                    </td>
+                                    <td>
+                                        <span>${cartProducts[i].product.price}</span>
+                                    </td>
+                                </tr>`
+            }
+
+            let subtotal = document.getElementById("subtotal");
+            let orderTotal = document.getElementById("order-total");
+
+            subtotal.innerText = total;
+            orderTotal.innerText = `R$${total}`;
+            orderTotal.innerHTML += `<br><small>${parcels}</small>`;
+        </script>
     </body>
 </html>
