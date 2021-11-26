@@ -175,9 +175,6 @@ function registerUser() {
                 emailAdress: emailAdress,
                 firstName: firstName,
                 password: password,
-                deliverAdress: [],
-                creditCard: [],
-                debitCard: [],
                 orders: []
             });
             localStorage.setItem('Users', JSON.stringify(users));
@@ -239,7 +236,7 @@ function addDeliverAdress() {
                 && (cep.length > 0) && (city.length > 0) && (state.length > 0)) {
         for (let i = 0; i < users.length; i++) {
             if (loggedUser == users[i].firstName) {
-                users[i].deliverAdress = {
+                deliverAdress = {
                     streetAdress: streetAdress,
                     homeNumber: homeNumber,
                     complement: complement,
@@ -249,7 +246,7 @@ function addDeliverAdress() {
                     state: state
                 }
 
-                localStorage.setItem('Users', JSON.stringify(users));
+                localStorage.setItem('DeliverAdress', JSON.stringify(deliverAdress));
             }
         }
         window.open("payment-form.html", "_self");
@@ -273,32 +270,34 @@ function addCardInformation() {
     let cardCode = document.getElementById("card-code").value;
     let expireCardDate = document.getElementById("expire-card-date").value;
 
-    let parcelsSelect = document.getElementById("parcels");
-    parcels = parcelsSelect.options[parcelsSelect.selectedIndex].value;
+    if (chosenCard.card == "credit card") {
+        let parcelsSelect = document.getElementById("parcels");
+        parcels = parcelsSelect.options[parcelsSelect.selectedIndex].value;
 
-    localStorage.setItem('Parcels', parcels);
+        localStorage.setItem('Parcels', parcels);
+    }
 
     if(cardName.length > 0 && (cardNumber.length > 0) && (cardCode.length > 0)
                 && (expireCardDate.length > 0)) {
         for (let i = 0; i < users.length; i++) {
             if (loggedUser == users[i].firstName) {
                 if (chosenCard.card == "credit card") {
-                    users[i].creditCard = {
+                    creditCard = {
                         cardName: cardName,
                         cardNumber: cardNumber,
                         cardCode: cardCode,
                         expireCardDate: expireCardDate
                     }
+                    localStorage.setItem('CreditCard', JSON.stringify(creditCard));
                 } else {
-                    users[i].debitCard = {
+                    debitCard = {
                         cardName: cardName,
                         cardNumber: cardNumber,
                         cardCode: cardCode,
                         expireCardDate: expireCardDate
                     }
+                    localStorage.setItem('DebitCard', JSON.stringify(debitCard));
                 }
-
-                localStorage.setItem('Users', JSON.stringify(users));
             }
         }
         window.open("order-confirmation.html", "_self");
@@ -311,17 +310,43 @@ function finalizeOrderFinal() {
             users[i].orders.push({
                 itens: cartProducts,
                 total: total,
-                parcels: parcels
+                parcels: parcels,
+                deliverAdress: deliverAdress,
+                creditCard: creditCard,
+                debitCard: debitCard
             })
         }
     }
     localStorage.setItem('Users', JSON.stringify(users));
     localStorage.removeItem('CartProducts');
     localStorage.removeItem('CartProductsCount');
+    localStorage.removeItem('Parcels');
 
     setTimeout(function() {
         window.open("message.html", "_self");
     }, 1000);
+}
+
+function clickedOrder(id) {
+    localStorage.setItem('ClickedOrderId', JSON.stringify(id));
+}
+
+function takeProductOutOfOrders(id) {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].firstName == loggedUser) {
+            for (let y = 0; y < users[i].orders.length; y++) {
+                if (y == id) {
+                    delete users[i].orders[y];
+                }
+            }
+
+            users[i].orders = users[i].orders.filter(function (i) {
+                return i;
+            })
+            localStorage.setItem('Users', JSON.stringify(users));
+        }
+    }
+    location.reload();
 }
 
 let dogProducts = [
@@ -459,3 +484,11 @@ let loggedUser = localStorage.getItem('LoggedUser') || "";
 let total = JSON.parse(localStorage.getItem('Total')) || 0;
 
 let parcels = localStorage.getItem('Parcels') || "";
+
+let clickedOrderId = JSON.parse(localStorage.getItem('ClickedOrderId')) || 0;
+
+let deliverAdress = JSON.parse(localStorage.getItem('DeliverAdress')) || {};
+
+let creditCard = JSON.parse(localStorage.getItem('CreditCard')) || {};
+
+let debitCard = JSON.parse(localStorage.getItem('DebitCard')) || {};

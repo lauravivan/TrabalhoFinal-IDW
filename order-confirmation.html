@@ -105,7 +105,9 @@
 
             subtotal.innerText = total;
             orderTotal.innerText = `R$${total}`;
-            orderTotal.innerHTML += `<br><small>${parcels}</small>`;
+            if (parcels.length > 0) {
+                orderTotal.innerHTML += `<br><small>${parcels}</small>`;
+            }
         </script>
     </body>
 </html>

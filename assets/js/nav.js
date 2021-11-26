@@ -12,7 +12,7 @@ let navText = `<nav class="navbar navbar-expand-sm bg-color-lighter">
                                     <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
                                         <li id="user-login"></li>
                                         <li>
-                                            <a class="dropdown-item" href="#">Meus pedidos</a>
+                                            <a class="dropdown-item" href="orders.html">Meus pedidos</a>
                                         </li>
                                         <li id="user-logout"></li>
                                     </ul>
