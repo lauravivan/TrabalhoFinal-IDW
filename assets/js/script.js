@@ -271,7 +271,7 @@ function addCardInformation() {
     let expireCardDate = document.getElementById("expire-card-date").value;
 
     if (chosenCard.card == "credit card") {
-        let parcelsSelect = document.getElementById("parcels");
+        let parcelsSelect = document.getElementById("parcels-sel");
         parcels = parcelsSelect.options[parcelsSelect.selectedIndex].value;
 
         localStorage.setItem('Parcels', parcels);

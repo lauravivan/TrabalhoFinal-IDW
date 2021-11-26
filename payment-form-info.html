@@ -77,20 +77,19 @@
             let cardContainer = document.getElementById("chosen-card");
             cardContainer.innerText = `CARTÃO ${chosenCard.cardImg.toUpperCase()}`
 
-            let twoParcels = (total/2).toFixed(2);
-            let threeParcels = (total/3).toFixed(2);
-            let fourParcels = (total/4).toFixed(2);
-            let fiveParcels = (total/5).toFixed(2);
-            let sixParcels = (total/6).toFixed(2);
-
-            let parcelsDiv = document.getElementById("parcels-div");
-
             if (chosenCard.card == "credit card") {
+                let twoParcels = (total/2).toFixed(2);
+                let threeParcels = (total/3).toFixed(2);
+                let fourParcels = (total/4).toFixed(2);
+                let fiveParcels = (total/5).toFixed(2);
+                let sixParcels = (total/6).toFixed(2);
+                let parcelsDiv = document.getElementById("parcels-div");
+
                 parcelsDiv.innerHTML = `<label for="parcels">Parcelas</label>
                                         <select class="form-select form-select-md" id="parcels-sel"></select>`
 
                 let parcelsSelect = document.getElementById("parcels-sel");
-                parcelsSelect.innerHTML = `<option value="à vista no cartão no valor de ${total}">À VISTA NO CARTÃO NO VALOR DE R$${total}</option>
+                parcelsSelect.innerHTML = `<option value="à vista no cartão no valor de R$${total}">À VISTA NO CARTÃO NO VALOR DE R$${total}</option>
                                             <option value="2 X R$${twoParcels} SEM JUROS">2 X R$${twoParcels} SEM JUROS</option>
                                             <option value="3 X R$${threeParcels} SEM JUROS">3 X R$${threeParcels} SEM JUROS</option>
                                             <option value="4 X R$${fourParcels} SEM JUROS">4 X R$${fourParcels} SEM JUROS</option>
