@@ -42,9 +42,9 @@ function showProducts(products, container) {
     for(let i = 0; i < products.length; i++) {
         container.innerHTML +=
             `<div class="col-md-4 col-lg-3 col-sm-6 col-12">
-                <div class="bg-light text-center pt-3 pb-2 opacity cursor-pointer container-fluid">
-                    <img class="img-fluid" id="image" onclick="goToProductPage(this.src)" src="${products[i].img}">
-                    <p class="text-uppercase m-2 product-name bolder-font-700 page-font">${products[i].name}</p>
+                <div class="opacity text-center cursor-pointer container-fluid">
+                    <img class="img-fluid" onclick="goToProductPage(this.src)" src="${products[i].img}">
+                    <p class="text-uppercase product-name mt-2 bolder-font-700 page-font">${products[i].name}</p>
                     <p>R$ ${products[i].price}</p>
                 </div>
             </div>`;
