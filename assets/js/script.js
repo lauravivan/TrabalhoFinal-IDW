@@ -352,45 +352,51 @@ function takeProductOutOfOrders(id) {
 let dogProducts = [
     {
         name: "Blusa de lã",
-        img: "assets/img/dog-products/wool-sweater.jpg",
+        img: "assets/img/dog-products/wool-sweater.png",
         description: "",
-        price: "99.90"
+        price: "59.90"
     },
     {
         name: "Coleira multi-color",
-        img: "assets/img/dog-products/dog-collar.jpg",
+        img: "assets/img/dog-products/dog-collar.png",
         description: "",
-        price: "99.90"
+        price: "59.90"
     },
     {
         name: "Macaco de pelúcia",
-        img: "assets/img/dog-products/monkey.jpg",
+        img: "assets/img/dog-products/monkey.png",
         description: "",
         price: "76.40"
     },
     {
         name: "Biscoitos",
-        img: "assets/img/dog-products/cookies.jpg",
+        img: "assets/img/dog-products/cookies.png",
         description: "",
-        price: "76.40"
+        price: "99.90"
     },
     {
         name: "Cachorro de pelúcia",
-        img: "assets/img/dog-products/a-dog-for-a-dog.jpg",
+        img: "assets/img/dog-products/a-dog-for-a-dog.png",
         description: "",
         price: "76.40"
     },
     {
         name: "Bolas de morder coloridas",
-        img: "assets/img/dog-products/balls.jpg",
+        img: "assets/img/dog-products/balls.png",
+        description: "",
+        price: "99.90"
+    },
+    {
+        name: "Óculos John Lennon | Cachorro",
+        img: "assets/img/dog-products/glasses.png",
         description: "",
         price: "76.40"
     },
     {
-        name: "Óculos John Lennon | Cachorro",
-        img: "assets/img/dog-products/glasses.jpg",
+        name: "Cama com estampa de melancia",
+        img: "assets/img/dog-products/watermelon.png",
         description: "",
-        price: "76.40"
+        price: "99.90"
     }
 ]
 
@@ -445,7 +451,7 @@ let catProducts = [
     },
     {
         name: "Óculos John Lennon | Gato",
-        img: "assets/img/cat-products/glasses.jpg",
+        img: "assets/img/cat-products/glasses.png",
         description: "O fecho é de velcro, ajustável à cabeça do seu gato. É super leve, fique tranquilo, o chifre não pesa! Tamanho único",
         price: "59.90"
     },
