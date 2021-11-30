@@ -1,0 +1,50 @@
+.page-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.bolder-font-500 {
+    font-weight: 500;
+}
+
+.bolder-font-700 {
+    font-weight: 700;
+}
+
+.bg-color-black {
+    background-color: #000;
+}
+
+.bg-color-lighter {
+    background-color: #F8F6F6;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.opacity:hover {
+    opacity: 0.8;
+}
+
+.text-highlight {
+    color: #FF8A00;
+}
+
+.page-logo {
+    max-width: 10vw;
+}
+
+.page-logo-white {
+    max-width: 20vw;
+    max-height: 25vh;
+}
+
+.product-image {
+    max-width: 20vw;
+    max-height: 60vh;
+}
+
+.btn-see-more:hover {
+    opacity: 0.9;
+    font-size: 1.3rem;
+}
