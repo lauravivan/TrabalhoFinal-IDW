@@ -1,8 +1,10 @@
+<h1>READ ME AINDA EM DESENVOLVIMENTO!!!</h1>
+
 <h1 align="center">
     <img alt="Logo da página" title="#LogoPetStore" src="trabalho-final/assets/img/store-logo.png" />
 </h1>
 
-<h1 align= "center"> TrabalhoFinal - IDW �</h1> 
+<h1 align= "center"> TrabalhoFinal - IDW </h1> 
 <p align="center">🐾 projeto final de construção de um site em que foi desenvolvido uma pet <i>store</i></p>
 <!-- adicionar badges-->
 <!-- <a href=https://shields.io/category/version>Badges</a> --> 
