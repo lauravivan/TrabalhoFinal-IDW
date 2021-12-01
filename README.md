@@ -4,9 +4,11 @@
 <h1 align= "center"> TrabalhoFinal - IDW </h1> 
 <div align= "center">
 
-[![GitHub license](https://img.shields.io/github/license/lauravivan/TrabalhoFinal-IDW.js.svg)]
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/LICENSE)
+[![GitHub branches](https://badgen.net/github/branches/Naereen/Strapdown.js)](https://github.com/lauravivan/TrabalhoFinal-IDW)
 
-<p align="center">projeto final de construção de um site em que foi desenvolvido uma <i> pet store 🐾 </i></p>
+<p align="center">
+projeto final de construção de um site em que foi desenvolvido uma <i> pet store 🐾 </i></p>
 
 <p align="center">
  <a href="#our-pet-store">Sobre</a> •
