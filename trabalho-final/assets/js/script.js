@@ -371,25 +371,25 @@ let dogProducts = [
     {
         name: "Biscoitos",
         img: "assets/img/dog-products/cookies.png",
-        description: "",
+        description: "Biscoitinhos de luxo, cheio de próteinas e muito gostoso!! Para seu pet que é o rei da casa.",
         price: "99.90"
     },
     {
         name: "Cachorro de pelúcia",
         img: "assets/img/dog-products/a-dog-for-a-dog.png",
-        description: "",
+        description: "Um cachorro para seu cachorro!!",
         price: "76.40"
     },
     {
         name: "Bolas de morder coloridas",
         img: "assets/img/dog-products/balls.png",
-        description: "",
+        description: "Várias bolinhas diversas para a diversão do seu pet!!!",
         price: "99.90"
     },
     {
         name: "Óculos John Lennon | Cachorro",
         img: "assets/img/dog-products/glasses.png",
-        description: "",
+        description: "Seu cachorro está cansado de não ser reconhecido como o astro do rock que ele é? Compre agora esses óculos para ficar no estilo",
         price: "76.40"
     },
     {
