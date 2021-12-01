@@ -7,7 +7,7 @@
 
 <p align="center">
  <a href="#our-pet-store">Sobre o projeto</a> •
-< a href="#features">Features</a> •
+ <a href="#features">Features</a> • 
  <a href="#tecnologias">Tecnologias</a> • 	
  <a href="#licença">Licença</a> •
  <a href="#discentes">Discentes</a> •
@@ -18,7 +18,17 @@
 ## Our Pet Store
 </i>Our pet store</i> um projeto de um site de uma loja de compras, desenvolvido a fins 
 das matérias de Algoritmo de Programação e Introdução ao Desenvolvimento Web, tendo armazenamento no LocalStorage.
+
 ## Features
+- [x] Cadastro de Clientes.
+- [x] Cadastro de Produtos.
+- [x] Adicionar "alt".
+- [x] Adicionar ao carrinho.
+- [ ] Cancelamento do produto.
+- [ ] Lupa de Pesquisa.
+- [ ] Responsividade
+
+
 
 ## Tecnologias
 "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
