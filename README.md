@@ -2,7 +2,7 @@
 	<img src="trabalho-final/assets/img/store-logo.png" img alt="Logo da página" title="#LogoPetStore">
 </h1>
 <h1 align= "center"> TrabalhoFinal - IDW </h1> 
-<p align="center">🐾 projeto final de construção de um site em que foi desenvolvido uma <i>pet store</i></p>
+<p align="center">projeto final de construção de um site em que foi desenvolvido uma <i> pet store 🐾 </i></p>
 
 
 <p align="center">
@@ -20,12 +20,13 @@
 das matérias de Algoritmo de Programação e Introdução ao Desenvolvimento Web, tendo armazenamento no LocalStorage.
 
 ## Features
-- [x] Cadastro de Clientes.
-- [x] Cadastro de Produtos.
-- [x] Adicionar "alt".
-- [x] Adicionar ao carrinho.
-- [ ] Cancelamento do produto.
-- [ ] Lupa de Pesquisa.
+- [x] Cadastro de Clientes
+- [x] Cadastro de Produtos
+- [x] Adicionar "alt"
+- [x] Botão de adição de produto
+- [x] O carrinho
+- [ ] Cancelamento do produto
+- [ ] Lupa de Pesquisa
 - [ ] Responsividade
 
 
