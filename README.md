@@ -50,4 +50,8 @@ visual studio G: utilizado para montar o site.
 	
 <!-- Algoritmos e Programação I - Prof. Fabrício(ntem) -->
 <!-- Desenvolvimento Web -  Prof. Cristiano (https://github.com/cristianomg10) -->
-
+<table>
+  <tr>
+    <td align="center"><a href=""><img style="border-radius: 50%;" src="https://github.com/cristianomg10" width="100px;" alt=""/><br /><sub><b>Prof. Cristiano</b></sub></a><br /">👨‍🏫</a></td>
+<td align="center"><a href=""><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90690022?s=40&v=4" width="100px" alt=""/><br /><sub><b>Prof. Fabrício</b></sub></a><br /">👨‍🏫</a></td>
+</table> 
