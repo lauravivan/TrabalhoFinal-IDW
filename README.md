@@ -6,7 +6,7 @@
 
 
 <p align="center">
- <a href="#our-pet-store">Sobre o projeto</a> •
+ <a href="#our-pet-store">Sobre</a> •
  <a href="#features">Features</a> • 
  <a href="#tecnologias">Tecnologias</a> • 	
  <a href="#licença">Licença</a> •
