@@ -1,8 +1,8 @@
 <h1 align="center">
-	<img src="trabalho-final/assets/img/store-logo.png" img alt="Logo da página" title="#LogoPetStore">
+	<img src="trabalho-final/assets/img/store-logo.png" img alt="Logo da página" title="#LogoPetStore" width=150>
 </h1>
-<h1 align= "center"> TrabalhoFinal - IDW </h1> 
-<p align="center">projeto final de construção de um site em que foi desenvolvido uma <i> pet store 🐾 </i></p>
+<h1 align= "center"> TrabalhoFinal </h1> 
+<p align="center">projeto final do curso de desenvolvimento web e algortimos de programação, onde foi desenvolvida a construção de um site de compras de uma <i> pet store 🐾 </i></p>
 <p> inserir link da pagina</p>
 <p> iserir imagem</p>
 <p align="center">
@@ -27,7 +27,8 @@ das matérias de Algoritmo de Programação e Introdução ao Desenvolvimento We
 - [x] O carrinho
 - [ ] Cancelamento do produto
 - [ ] Lupa de Pesquisa
-- [ ] Responsividade
+- [x] Responsividade
+- [x] Entre outros...
 
 
 
@@ -38,9 +39,14 @@ visual studio G: utilizado para montar o site.
 
 
 ## :round_pushpin: Discentes
-"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/lauravivan"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/64754203?v=4" width="100px;" alt=""/><br /><sub><b>Laura Vivan</b></sub></a><br /">👨‍🎓</a></td>
+<td align="center"><a href=""><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90690022?s=40&v=4" width="100px;" alt=""/><br /><sub><b>Gabriela Nora</b></sub></a><br /">👨‍🎓</a></td>
+</table> 
 
-## :round_pushpin: Docentes
-"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+	    ## :round_pushpin: Docentes
+	
+<!-- Algoritmos e Programação I - Prof. Fabrício(ntem) -->
+<!-- Desenvolvimento Web -  Prof. Cristiano (https://github.com/cristianomg10) -->
 
-##
