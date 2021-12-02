@@ -13,10 +13,11 @@
 
 <p align="center">projeto final do curso de desenvolvimento web e algortimos de programação, onde foi desenvolvida a construção de um site de compras de uma <i> pet store 🐾 </i></p>
 
-<div align="center" width=150>
-	<h3><a href=https://lauravivan.github.io/TrabalhoFinal-IDW/trabalho-final/index.html> Our Pet Store</a></h3> 
-	
+<h3 align="center"><a href=https://lauravivan.github.io/TrabalhoFinal-IDW/trabalho-final/index.html> Our Pet Store</a></h3>
+<div align="center" width=150> 	
+
 ![Alt Text](https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/maybe/ezgif.com-gif-maker.gif)
+
 </div>
 	
 <p> </p>
@@ -41,10 +42,10 @@ das matérias de Algoritmo de Programação e Introdução ao Desenvolvimento We
 
 
 ## :computer: Tecnologias
-<p align=center> As tecnologias utilizadas para o desenvolvimento desse site foram:
-figma: utlizado para criar o design das páginas criadas.
-visual studio G: utilizado para montar o site. 
+As tecnologias utilizadas para o desenvolvimento desse site foram:<br>
 
+• <a href= "https://www.figma.com/file/PouCsJejPJSGnGQKIBv1j3/Lojinha-Pet?node-id=0%3A1"> Figma:</a> utlizado para criar o design das páginas criadas.<br>
+• <a href= https://code.visualstudio.com> Visual studio G: </a>utilizado para montar o site.<br></p> 
 
 ## :round_pushpin: Alunas 
 	
