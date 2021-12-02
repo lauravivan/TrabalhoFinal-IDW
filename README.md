@@ -11,11 +11,14 @@
  <a href="#round_pushpin-professores">Docentes</a> 	
 </p>
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
-
 <p align="center">projeto final do curso de desenvolvimento web e algortimos de programação, onde foi desenvolvida a construção de um site de compras de uma <i> pet store 🐾 </i></p>
-<p>https://lauravivan.github.io/TrabalhoFinal-IDW/trabalho-final/index.html</p>
 
+<div align="center" width=150>
+https://lauravivan.github.io/TrabalhoFinal-IDW/trabalho-final/index.html
+	
+![Alt Text](https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/maybe/ezgif.com-gif-maker.gif)
+</div>
+	
 <p> </p>
 
 
