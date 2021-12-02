@@ -11,6 +11,8 @@
  <a href="#round_pushpin-professores">Docentes</a> 	
 </p>
 
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
 <p align="center">projeto final do curso de desenvolvimento web e algortimos de programação, onde foi desenvolvida a construção de um site de compras de uma <i> pet store 🐾 </i></p>
 <p>https://lauravivan.github.io/TrabalhoFinal-IDW/trabalho-final/index.html</p>
 
@@ -31,6 +33,7 @@ das matérias de Algoritmo de Programação e Introdução ao Desenvolvimento We
 - [ ] Lupa de Pesquisa
 - [x] Responsividade
 - [x] Entre outros...
+
 
 
 
