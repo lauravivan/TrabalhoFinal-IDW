@@ -62,7 +62,8 @@ visual studio G: utilizado para montar o site.
 </table> 
 
 
+<img src="https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/arranha_arranha.gif.gif" width="100" height="100" />
 
-<h1 align="center">
-<img src="https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/bored-cat.png" width= 90>
-</h1>
+
+
+
