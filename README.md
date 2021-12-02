@@ -14,7 +14,7 @@
 <p align="center">projeto final do curso de desenvolvimento web e algortimos de programação, onde foi desenvolvida a construção de um site de compras de uma <i> pet store 🐾 </i></p>
 
 <div align="center" width=150>
-https://lauravivan.github.io/TrabalhoFinal-IDW/trabalho-final/index.html
+	<h3><a href=https://lauravivan.github.io/TrabalhoFinal-IDW/trabalho-final/index.html> Our Pet Store</a></h3> 
 	
 ![Alt Text](https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/maybe/ezgif.com-gif-maker.gif)
 </div>
@@ -60,6 +60,9 @@ visual studio G: utilizado para montar o site.
     <td align="center"><a href="https://github.com/cristianomg10"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/3828007?v=4" width="100px;" alt=""/><br /><sub><b>Prof. Cristiano</b></sub></a><br /">👨‍🏫</a></td>
 <td align="center"><a href=""><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90690022?s=40&v=874" width="100px" alt=""/><br /><sub><b>Prof. Fabrício</b></sub></a><br /">👨‍🏫</a></td>
 </table> 
+
+
+
 <h1 align="center">
-<img src="https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/bored-cat.png" width= 70>
+<img src="https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/bored-cat.png" width= 90>
 </h1>
