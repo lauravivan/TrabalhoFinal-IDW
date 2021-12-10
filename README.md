@@ -59,7 +59,7 @@ As tecnologias utilizadas para o desenvolvimento desse site foram:<br>
 <table>
   <tr>
     <td align="center"><a href="https://github.com/cristianomg10"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/3828007?v=4" width="100px;" alt=""/><br /><sub><b>Prof. Cristiano</b></sub></a><br /">👨‍🏫</a></td>
-<td align="center"><a href=""><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90690022?s=40&v=874" width="100px" alt=""/><br /><sub><b>Prof. Fabrício</b></sub></a><br /">👨‍🏫</a></td>
+<td align="center"><a href="https://github.com/herpich"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/12677450?v=4" width="100px" alt=""/><br /><sub><b>Prof. Fabrício</b></sub></a><br /">👨‍🏫</a></td>
 </table> 
 
 
