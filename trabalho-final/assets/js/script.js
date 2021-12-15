@@ -317,7 +317,7 @@ function clickedOrder(id) {
     localStorage.setItem('ClickedOrderId', JSON.stringify(id));
 }
 
-function takeProductOutOfOrders(id) {
+function cancelOrder(id) {
     for (let i = 0; i < users.length; i++) {
         if (users[i].firstName == loggedUser) {
             for (let y = 0; y < users[i].orders.length; y++) {
