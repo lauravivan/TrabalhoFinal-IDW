@@ -7,30 +7,6 @@ function userLogin() {
     }
 }
 
-function recoverPassword() {
-    let userEmailAdress = document.getElementById("email-adress").value;
-    let password = document.getElementById("user-password").value;
-    let passwordConfirmation = document.getElementById("user-password-confirmation").value;
-    let alertDiv = document.getElementById("alert");
-    alertDiv.innerText = "";
-    if (password == passwordConfirmation) {
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].emailAdress == userEmailAdress) {
-                users[i].password = passwordConfirmation;
-            }
-        }
-
-        localStorage.setItem('Users', JSON.stringify(users));
-        alertDiv.innerHTML = `<div class="alert alert-warning" role="alert">Senha cadastrada com sucesso!</div>`
-
-        setTimeout(function() {
-            window.open("login.html", "_self");
-        }, 1000);
-    } else {
-        alertDiv.innerHTML = `<div class="alert alert-warning" role="alert">A sua senha está incorreta!</div>`;
-    }
-}
-
 function cartCount() {
     if (cartProductsCount > 0) {
         let cartIcon = document.getElementById("cart-icon");
@@ -85,13 +61,13 @@ function showClickedProduct(clickedProduct) {
 }
 
 function buyProduct() {
+    let divAlert = document.getElementById("alert");
     if (JSON.parse(localStorage.getItem('CartProductsCount')) >= 20) {
-        document.getElementById("alert").innerHTML = 
+        divAlert.innerHTML = 
         `<div class="alert alert-warning" role="alert"> O seu carrinho já está cheio!</div>`;
     } else {
         let productTitleElement = document.getElementById("product-title").getAttribute("name");
         let quantitySelected = document.getElementById("quantity").value;
-        let divAlert = document.getElementById("alert");
         divAlert.innerHTML = `<div class="alert alert-warning" role="alert">Este item foi adicionado ao seu carrinho!</div>`
         cartProductsCount++;
         localStorage.setItem('CartProductsCount', JSON.stringify(cartProductsCount));
@@ -150,6 +126,27 @@ function finalizeOrder() {
     }
 }
 
+function login() {
+    let emailAdress = document.getElementById("email-adress").value;
+    let userPassword = document.getElementById("user-password").value;
+    let alertDiv = document.getElementById("alert");
+    alertDiv.innerText = "";
+    let userDoesntExist = true;
+
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].emailAdress == emailAdress && (users[i].password == userPassword)) {
+            localStorage.setItem("LoggedUser", users[i].firstName)
+            userDoesntExist = false;
+            setTimeout(function() {
+                window.open("index.html", "_self");
+            }, 1000);
+        }
+    }
+    if (userDoesntExist) {
+        alertDiv.innerHTML = `<div class="alert alert-warning" role="alert">O seu e-mail ou a sua senha estão incorretos!</div>`;
+    }
+}
+
 function registerUser() {
     let emailAdress = document.getElementById("email-adress").value;
     let firstName = document.getElementById("first-name").value;
@@ -192,27 +189,27 @@ function registerUser() {
     }
 }
 
-function login() {
-    let emailAdress = document.getElementById("email-adress").value;
-    let userPassword = document.getElementById("user-password").value;
-
-    console.log(emailAdress)
-    console.log(userPassword)
+function recoverPassword() {
+    let userEmailAdress = document.getElementById("email-adress").value;
+    let password = document.getElementById("user-password").value;
+    let passwordConfirmation = document.getElementById("user-password-confirmation").value;
     let alertDiv = document.getElementById("alert");
     alertDiv.innerText = "";
-    let userDoesntExist = true;
-
-    for (let i = 0; i < users.length; i++) {
-        if (users[i].emailAdress == emailAdress && (users[i].password == userPassword)) {
-            localStorage.setItem("LoggedUser", users[i].firstName)
-            userDoesntExist = false;
-            setTimeout(function() {
-                window.open("index.html", "_self");
-            }, 1000);
+    if (password == passwordConfirmation) {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].emailAdress == userEmailAdress) {
+                users[i].password = passwordConfirmation;
+            }
         }
-    }
-    if (userDoesntExist) {
-        alertDiv.innerHTML = `<div class="alert alert-warning" role="alert">O seu e-mail ou a sua senha estão incorretos!</div>`;
+
+        localStorage.setItem('Users', JSON.stringify(users));
+        alertDiv.innerHTML = `<div class="alert alert-warning" role="alert">Senha cadastrada com sucesso!</div>`
+
+        setTimeout(function() {
+            window.open("login.html", "_self");
+        }, 1000);
+    } else {
+        alertDiv.innerHTML = `<div class="alert alert-warning" role="alert">A sua senha está incorreta!</div>`;
     }
 }
 
@@ -234,21 +231,17 @@ function addDeliverAdress() {
 
     if(streetAdress.length > 0 && (homeNumber.length > 0) && (district.length > 0)
                 && (cep.length > 0) && (city.length > 0) && (state.length > 0)) {
-        for (let i = 0; i < users.length; i++) {
-            if (loggedUser == users[i].firstName) {
-                deliverAdress = {
-                    streetAdress: streetAdress,
-                    homeNumber: homeNumber,
-                    complement: complement,
-                    district: district,
-                    cep: cep,
-                    city: city,
-                    state: state
-                }
-
-                localStorage.setItem('DeliverAdress', JSON.stringify(deliverAdress));
-            }
+        deliverAdress = {
+            streetAdress: streetAdress,
+            homeNumber: homeNumber,
+            complement: complement,
+            district: district,
+            cep: cep,
+            city: city,
+            state: state
         }
+
+        localStorage.setItem('DeliverAdress', JSON.stringify(deliverAdress));
         window.open("payment-form.html", "_self");
     }
 }
@@ -270,35 +263,28 @@ function addCardInformation() {
     let cardCode = document.getElementById("card-code").value;
     let expireCardDate = document.getElementById("expire-card-date").value;
 
-    if (chosenCard.card == "credit card") {
-        let parcelsSelect = document.getElementById("parcels-sel");
-        parcels = parcelsSelect.options[parcelsSelect.selectedIndex].value;
-
-        localStorage.setItem('Parcels', parcels);
-    }
-
     if(cardName.length > 0 && (cardNumber.length > 0) && (cardCode.length > 0)
                 && (expireCardDate.length > 0)) {
-        for (let i = 0; i < users.length; i++) {
-            if (loggedUser == users[i].firstName) {
-                if (chosenCard.card == "credit card") {
-                    creditCard = {
-                        cardName: cardName,
-                        cardNumber: cardNumber,
-                        cardCode: cardCode,
-                        expireCardDate: expireCardDate
-                    }
-                    localStorage.setItem('CreditCard', JSON.stringify(creditCard));
-                } else {
-                    debitCard = {
-                        cardName: cardName,
-                        cardNumber: cardNumber,
-                        cardCode: cardCode,
-                        expireCardDate: expireCardDate
-                    }
-                    localStorage.setItem('DebitCard', JSON.stringify(debitCard));
-                }
+        if (chosenCard.card == "credit card") {
+            let parcelsSelect = document.getElementById("parcels-sel");
+            parcels = parcelsSelect.options[parcelsSelect.selectedIndex].value;
+            localStorage.setItem('Parcels', parcels);
+
+            creditCard = {
+                cardName: cardName,
+                cardNumber: cardNumber,
+                cardCode: cardCode,
+                expireCardDate: expireCardDate
             }
+            localStorage.setItem('CreditCard', JSON.stringify(creditCard));
+        } else {
+            debitCard = {
+                cardName: cardName,
+                cardNumber: cardNumber,
+                cardCode: cardCode,
+                expireCardDate: expireCardDate
+            }
+            localStorage.setItem('DebitCard', JSON.stringify(debitCard));
         }
         window.open("order-confirmation.html", "_self");
     }
@@ -331,7 +317,7 @@ function clickedOrder(id) {
     localStorage.setItem('ClickedOrderId', JSON.stringify(id));
 }
 
-function takeProductOutOfOrders(id) {
+function cancelOrder(id) {
     for (let i = 0; i < users.length; i++) {
         if (users[i].firstName == loggedUser) {
             for (let y = 0; y < users[i].orders.length; y++) {
