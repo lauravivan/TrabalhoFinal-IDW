@@ -353,49 +353,50 @@ let dogProducts = [
     {
         name: "Blusa de lã",
         img: "assets/img/dog-products/wool-sweater.png",
-        description: "",
+        description: "Seu pet sente muito frio e sempre quer estar na moda? Então essa blusinha de lã é perfeita para ele",
         price: "59.90"
     },
     {
         name: "Coleira multi-color",
         img: "assets/img/dog-products/dog-collar.png",
-        description: "",
+        description: "Para que ter várias coleiras coloridas quando se pode ter apenas uma com várias cores ",
         price: "59.90"
     },
     {
         name: "Macaco de pelúcia",
         img: "assets/img/dog-products/monkey.png",
-        description: "",
+        description: "Macaco de pelúcia, perfeito para abraços!!!",
         price: "76.40"
     },
     {
         name: "Biscoitos",
         img: "assets/img/dog-products/cookies.png",
-        description: "Biscoitinhos de luxo, cheio de próteinas e muito gostoso!! Para seu pet que é o rei da casa.",
+
+        description: "Biscoitinho cheio de proteínas para o seu doguinho ficar feliz!",
         price: "99.90"
     },
     {
         name: "Cachorro de pelúcia",
         img: "assets/img/dog-products/a-dog-for-a-dog.png",
-        description: "Um cachorro para seu cachorro!!",
+        description: "Seu cachorro está se sentindo solitário? Compre um cachorro de pelúcia para ele.",
         price: "76.40"
     },
     {
         name: "Bolas de morder coloridas",
         img: "assets/img/dog-products/balls.png",
-        description: "Várias bolinhas diversas para a diversão do seu pet!!!",
+        description: "Bolas???,bolas! Bolas!! BOLAS!!",
         price: "99.90"
     },
     {
         name: "Óculos John Lennon | Cachorro",
         img: "assets/img/dog-products/glasses.png",
-        description: "Seu cachorro está cansado de não ser reconhecido como o astro do rock que ele é? Compre agora esses óculos para ficar no estilo",
+        description: "Se o seu cachorro é um astro do rock, mas não é reconhecido como um, esse óculos pode resolver o problema."
         price: "76.40"
     },
     {
         name: "Cama com estampa de melancia",
         img: "assets/img/dog-products/watermelon.png",
-        description: "",
+        description: " Isso sim é uma cama tão refrescante quanto uma melancia geladinha!!",
         price: "99.90"
     }
 ]
@@ -452,25 +453,25 @@ let catProducts = [
     {
         name: "Óculos John Lennon | Gato",
         img: "assets/img/cat-products/glasses.png",
-        description: "O fecho é de velcro, ajustável à cabeça do seu gato. É super leve, fique tranquilo, o chifre não pesa! Tamanho único",
+        description: "Para gatos que apenas querem ficar no estilo sem serem julgados, pspsps que gatinho!!",
         price: "59.90"
     },
     {
         name: "Comedouro raso | Sachê",
         img: "assets/img/cat-products/bowl.jpg",
-        description: "",
+        description: "O comedouro ideal para o seu gatinho, talvez ele para de roubar a sua comida com esse comedouro ideal",
         price: "76.40"
     },
     {
         name: "Suporte 2 alturas | Para comedouro de porcelana",
         img: "assets/img/cat-products/bowl-and-support.jpg",
-        description: "",
+        description: "A porcelana faz com que o ração do seu gato envelheça com menos tempo e guarde todas suas protéinas, além de ser um arraso!",
         price: "76.40"
     },
     {
         name: "Kit comedouros de porcelana | Ração e água",
         img: "assets/img/cat-products/two-bowls.jpg",
-        description: "",
+        description: "Para que apenas levar o comedouro quando se pode levar o kit completo que irá proporcionar uma melhor alimentação para o seu gatinho",
         price: "76.40"
     }
 ]
