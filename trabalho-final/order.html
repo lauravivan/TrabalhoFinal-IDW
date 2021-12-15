@@ -75,10 +75,18 @@
                 if (users[i].firstName == loggedUser) {
                     for (let y = 0; y < users[i].orders.length; y++) {
                         if (y == JSON.parse(localStorage.getItem('ClickedOrderId'))) {
-                            for (let info in users[i].orders[y].deliverAdress) {
+                            deliverAdressContainer.innerHTML += 
+                                                    `<p class="lh-1">${users[i].orders[y].deliverAdress.streetAdress}, ${users[i].orders[y].deliverAdress.homeNumber}</p>`
+                            if (users[i].orders[y].deliverAdress.complement.length > 0) {
                                 deliverAdressContainer.innerHTML += 
-                                                    `<p class="lh-1">${users[i].orders[y].deliverAdress[info]}</p>`
+                                                    `<p class="lh-1">${users[i].orders[y].deliverAdress.complement}</p>`
                             }
+                            deliverAdressContainer.innerHTML += 
+                                                    `<p class="lh-1">${users[i].orders[y].deliverAdress.district}</p>`
+                            deliverAdressContainer.innerHTML += 
+                                                    `<p class="lh-1">${users[i].orders[y].deliverAdress.city}, ${users[i].orders[y].deliverAdress.state}</p>`
+                            deliverAdressContainer.innerHTML += 
+                                                    `<p class="lh-1">${users[i].orders[y].deliverAdress.cep}</p>`
 
                             if (users[i].orders[y].creditCard != null) {
                                 cardInfoContainer.innerHTML += `<p>Cartão de crédito **** ${users[i].orders[y].creditCard.cardNumber.substr(15, 18)}</p>`;
