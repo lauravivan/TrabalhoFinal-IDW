@@ -371,6 +371,7 @@ let dogProducts = [
     {
         name: "Biscoitos",
         img: "assets/img/dog-products/cookies.png",
+
         description: "Biscoitinho cheio de proteínas para o seu doguinho ficar feliz!",
         price: "99.90"
     },
@@ -389,7 +390,7 @@ let dogProducts = [
     {
         name: "Óculos John Lennon | Cachorro",
         img: "assets/img/dog-products/glasses.png",
-        description: "Se o seu cachorro é um astro do rock, mas não é reconhecido como um, esse óculos pode resolver o problema.",
+        description: "Se o seu cachorro é um astro do rock, mas não é reconhecido como um, esse óculos pode resolver o problema."
         price: "76.40"
     },
     {
