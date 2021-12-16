@@ -105,7 +105,7 @@
                                         <i class="bi bi-trash-fill fs-5 cursor-pointer" id="${productId++}" onclick="takeProductOutOfCart(this.id)"></i>
                                     </td>
                                 </tr>`
-                    totalValue += parseFloat(cartProducts[i].product.price) * parseInt(cartProducts[i].quantity);
+                    totalValue += cartProducts[i].product.price * cartProducts[i].quantity;
                 }
                 document.getElementById("total").innerText = `R$ ${totalValue.toFixed(2)}`;
                 localStorage.setItem('Total', JSON.stringify(totalValue.toFixed(2)));
