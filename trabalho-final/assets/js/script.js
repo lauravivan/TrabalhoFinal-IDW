@@ -305,7 +305,6 @@ function finalizeOrderFinal() {
                 users[i].orders.push({
                     itens: cartProducts,
                     total: total,
-                    parcels: parcels,
                     deliverAdress: deliverAdress,
                     debitCard: debitCard
                 })
