@@ -16,7 +16,7 @@
 <h3 align="center"><a href=https://lauravivan.github.io/TrabalhoFinal-IDW/trabalho-final/index.html> Our Pet Store</a></h3>
 <div align="center" width=150> 	
 
-![Alt Text](https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/maybe/ezgif.com-gif-maker.gif)
+![Alt Text](https://github.com/lauravivan/TrabalhoFinal-IDW/blob/main/trabalho-final/assets/img/ezgif.com-gif-maker.gif)
 
 </div>
 	
