@@ -293,20 +293,31 @@ function addCardInformation() {
 function finalizeOrderFinal() {
     for (let i = 0; i < users.length; i++) {
         if (users[i].firstName == loggedUser) {
-            users[i].orders.push({
-                itens: cartProducts,
-                total: total,
-                parcels: parcels,
-                deliverAdress: deliverAdress,
-                creditCard: creditCard,
-                debitCard: debitCard
-            })
+            if (creditCard.length > 0) {
+                users[i].orders.push({
+                    itens: cartProducts,
+                    total: total,
+                    parcels: parcels,
+                    deliverAdress: deliverAdress,
+                    creditCard: creditCard
+                })
+            } else {
+                users[i].orders.push({
+                    itens: cartProducts,
+                    total: total,
+                    parcels: parcels,
+                    deliverAdress: deliverAdress,
+                    debitCard: debitCard
+                })
+            }
         }
     }
     localStorage.setItem('Users', JSON.stringify(users));
     localStorage.removeItem('CartProducts');
     localStorage.removeItem('CartProductsCount');
     localStorage.removeItem('Parcels');
+    localStorage.removeItem('DebitCard')
+    localStorage.removeItem('CreditCard')
 
     setTimeout(function() {
         window.open("message.html", "_self");
